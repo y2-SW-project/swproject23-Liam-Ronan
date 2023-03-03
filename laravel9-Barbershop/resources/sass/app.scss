@@ -1,5 +1,5 @@
 //Import Heading font
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap');
 
 //Import body font
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
@@ -13,13 +13,14 @@
 //Custom Colours
 $secondary: #0E171B;
 $date-color: #848484;
+$highlight-colour: #cc5d57;
 
 //Custom fonts
-$font-heading: "Raleway";
+$font-heading: "Lora";
 $font-body: "Roboto";
 
 /* Globals */
-$linear: linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
+$linear: linear-gradient(160deg, #cc5d57 0%, #000000 100%);
 
 //Import Variables
 @import "../node_modules/bootstrap/scss/variables";
@@ -28,8 +29,10 @@ $linear: linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
 
 //styles
 .gradient {
-    background: linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
+    background: $linear;
 }
+
+
 
 .card {
     &-text {
@@ -40,6 +43,10 @@ $linear: linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
 
 .heading {
     font-family: $font-heading;
+}
+
+.other-colour {
+    color: $highlight-colour;
 }
 
 .bg-img {
@@ -55,7 +62,8 @@ $linear: linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
 }
 
 .bg {
-    background:url(../images/blue-concert.png)  center / cover no-repeat; background-color:#0E171B; 
+    background:url(../../public/images/hair-spies-TNhm6uVurpU-unsplash.jpg) center / cover no-repeat;
+    background-color:#444647; 
     background-blend-mode: overlay;
 }
 
@@ -64,27 +72,10 @@ $linear: linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
     background-color: rgba($color: #000000, $alpha: 0.55);
 }
 
-.other-btn {
-    background-color: $secondary;
-    padding: 5px;
-    border: 3px solid #72EDF2;
-    transition: 1s ease-in-out;
-
-    &:hover {
-        border: 3px solid #5151E5;
-        transition: 1s ease-in-out;
-    }
+.btn {
+    border: none;
 }
 
-.vid-btn {
-    @extend .other-btn;
-    background-color: transparent;
-    
-    &:hover {
-        border: 3px solid #5151E5;
-        transition: 1s ease-in-out;
-    }
-}
 
 //Import Buttons
 @import "../node_modules/bootstrap/scss/buttons";
