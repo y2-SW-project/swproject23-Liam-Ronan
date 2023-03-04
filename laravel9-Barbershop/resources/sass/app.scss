@@ -20,7 +20,7 @@ $font-heading: "Lora";
 $font-body: "Roboto";
 
 /* Globals */
-$linear: linear-gradient(160deg, #cc5d57 0%, #000000 100%);
+$linear: linear-gradient(160deg, $highlight-colour 0%, #000000 100%);
 
 //Import Variables
 @import "../node_modules/bootstrap/scss/variables";
@@ -31,8 +31,6 @@ $linear: linear-gradient(160deg, #cc5d57 0%, #000000 100%);
 .gradient {
     background: $linear;
 }
-
-
 
 .card {
     &-text {
@@ -63,7 +61,7 @@ $linear: linear-gradient(160deg, #cc5d57 0%, #000000 100%);
 
 .bg {
     background:url(../../public/images/hair-spies-TNhm6uVurpU-unsplash.jpg) center / cover no-repeat;
-    background-color:#444647; 
+    background-color:#323333; 
     background-blend-mode: overlay;
 }
 

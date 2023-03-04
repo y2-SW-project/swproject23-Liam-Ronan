@@ -12,7 +12,7 @@
 		<header>
 			<nav class="navbar fixed-top bg-blur navbar-expand-lg py-4">
 				<div class="container-xl">
-						<a class="heading text-light navbar-brand fs-2 fw-bold" href="#">Boyz2Men</a>
+						<a class="heading text-light navbar-brand fs-2 fw-normal" href="#">Boyz2Men</a>
 						<button
 							class="navbar-toggler bg-light"
 							type="button"
@@ -82,83 +82,77 @@
 				</div>
 
 				<div class="container text-light">
+					<div class="row py-3">
+						<div class="col-md-3">
+							<ul class="list-group text-light text-decoration-underline">
+								<a href="#" class="text-light heading"><li class="list-group-item bg-black text-light fs-5 border-0 px-0">Bookings</li></a>
+								<a href="#" class="text-light heading"><li class="list-group-item bg-black text-light fs-5 border-0 px-0">About</li></a>
+								<a href="#" class="text-light heading"><li class="list-group-item bg-black text-light fs-5 border-0 px-0">Contact</li></a>
+							</ul>
+							<div class="col-md-8 my-4">
+								<a class="social" href="#"><img class="img-fluid mx-2" src="social/FB.png" alt="Facebook"></a>
+								<a class="social" href="#"><img class="img-fluid mx-2" src="social/instagram.png" alt="instagram"></a>
+								<a class="social" href="#"><img class="img-fluid mx-2" src="social/linkedin.png" alt="LinkedIn"></a>
+								<a class="social" href="#"><img class="img-fluid mx-2" src="social/Twitter.png" alt="Twitter"></a>
+							</div>	
+						</div>
+						<div class="col-md-3">
+							<h3 class="heading">Hours</h3>
+							<ul class="list-group text-light py-4">
+								<li
+									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
+								>
+									Mon-Wed: 9:30am - 6:00pm
+								</li>
+								<li
+									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
+								>
+									Thurs-Fri: 9:30am - 7:00pm
+								</li>
+								<li
+									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
+								>
+									Sat: 8:00am - 5:00pm
+								</li>
+								<li
+									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
+								>
+									Closed Sunday
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<h3 class="heading">Location</h3>
+							<ul class="list-group text-light py-4">
+								<li
+									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
+								>
+									8 Main St,
+								</li>
+								<li
+									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
+								>
+									Wicklow,
+								</li>
+								<li
+									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
+								>
+									A67 T656
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<h3 class="heading">Book an Appointment</h3>
+							<button class="gradient btn fs-5 my-4">
+								<a class="text-light p-3 text-decoration-none fw-semibold" href="../Pages/events.html">Book Appointment</a>
+							</button>	
+						</div>
+					</div>
+				</div>
+				<div class="container">
 					<div class="row">
-						<div class="col-md-3">
-							<h3 class="heading">All events</h3>
-							<ul class="list-group text-light py-5">
-								<li
-									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
-								>
-									Your Tickets
-								</li>
-								<li
-									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
-								>
-									Events
-								</li>
-								<li
-									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
-								>
-									Terms & Conditions
-								</li>
-							</ul>
-							<p class="body mt-5">EasyEvents &copy; 2023</p>
-						</div>
-						<div class="col-md-3">
-							<h3 class="heading">About</h3>
-							<ul class="list-group text-light py-5">
-								<li
-									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
-								>
-									Contact Us
-								</li>
-								<li
-									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
-								>
-									Partners
-								</li>
-								<li
-									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
-								>
-									Privacy & Cookies
-								</li>
-								<li
-									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
-								>
-									Guide
-								</li>
-							</ul>
-						</div>
-						<div class="col-md-3">
-							<h3 class="heading">Help Center</h3>
-							<ul class="list-group text-light py-5">
-								<li
-									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
-								>
-									Get Started
-								</li>
-								<li
-									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
-								>
-									Policies
-								</li>
-								<li
-									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
-								>
-									Newsletters
-								</li>
-								<li
-									class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
-								>
-									FAQs
-								</li>
-							</ul>
-						</div>
-						<div class="col-md-3">
-							<h3 class="heading">Download Our App</h3>
-							<a href="#"><img class="pt-5" src="logos/AppStore.png" alt=""></a>
-							<a href="#"><img class="pt-4" src="logos//GooglePlay.png" alt=""></a>
-						</div>
+						<hr class="border border-2">
+						<p class="body mt-2 text-light">Boyz2Men &copy; 2023</p>
 					</div>
 				</div>
 			</div>
