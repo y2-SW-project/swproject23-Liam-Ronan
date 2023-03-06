@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        Booking::factory(6)->create();
+        $this->call(BarberSeeder::class);
+        
 
         /*  \App\Models\User::factory(10)->create(); */
 
