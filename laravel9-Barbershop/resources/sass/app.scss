@@ -14,6 +14,7 @@
 $secondary: #0E171B;
 $date-color: #848484;
 $highlight-colour: #cc5d57;
+$bg-colour: #111111;
 
 //Custom fonts
 $font-heading: "Lora";
@@ -32,6 +33,10 @@ $linear: linear-gradient(160deg, $highlight-colour 0%, #000000 100%);
     background: $linear;
 }
 
+.bg-colour {
+    background-color: $bg-colour;
+}
+
 .card {
     &-text {
         color: $date-color;
@@ -39,8 +44,15 @@ $linear: linear-gradient(160deg, $highlight-colour 0%, #000000 100%);
     }
 }
 
+
 .heading {
     font-family: $font-heading;
+}
+
+.para {
+    font-family: $font-body;
+    line-height: 1.7rem;
+    letter-spacing: 1px;
 }
 
 .other-colour {
@@ -59,21 +71,24 @@ $linear: linear-gradient(160deg, $highlight-colour 0%, #000000 100%);
     letter-spacing: 1px;
 }
 
+.iconOne {
+    width: 100px;
+    height: 100px;
+}
+
+.chairImg {
+    height: 623px;
+}
+
 .bg {
     background:url(../../public/images/hair-spies-TNhm6uVurpU-unsplash.jpg) center / cover no-repeat;
     background-color:#323333; 
     background-blend-mode: overlay;
 }
 
-
 .bg-blur {
     background-color: rgba($color: #000000, $alpha: 0.55);
 }
-
-.btn {
-    border: none;
-}
-
 
 //Import Buttons
 @import "../node_modules/bootstrap/scss/buttons";
