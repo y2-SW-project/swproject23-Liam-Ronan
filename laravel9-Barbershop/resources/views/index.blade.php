@@ -42,7 +42,7 @@
                           />
                         </div>
                       
-                        <div class="col-lg-4 mb-4 mb-lg-0">
+                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                           <img
                             src="{{asset('images/andre-hunter-QjwghSDCy_s-unsplash.jpg')}}"
                             class="w-100 shadow-1-strong rounded mb-4"
@@ -50,8 +50,8 @@
                           />
                       
                           <img
-                            src="{{asset('images/joshua-lawrence-dU6eE_j2My8-unsplash.jpg')}}"
-                            class="chairImg w-100 shadow-1-strong rounded mb-4"
+                            src="{{asset('images/pexels-maria-orlova-4969842.jpg')}}"
+                            class="w-100 shadow-1-strong rounded mb-4"
                             alt="Yosemite National Park"
                           />
                         </div>
@@ -65,9 +65,9 @@
         <div class="container">
             <div class="row py-5">
                 <div class="col-md-6">
-                    <img class="w-100 h-100 img-fluid rounded" src="{{asset('images/christian-koch-mQ4Ty8VmnPk-unsplash.jpg')}}" alt="">
+                    <img class="w-100 h-100 img-fluid rounded pt-2" src="{{asset('images/christian-koch-mQ4Ty8VmnPk-unsplash.jpg')}}" alt="">
                 </div>
-                <div class="col-md-6 text-light px-5">
+                <div class="col-md-6 text-light px-5 pt-3">
                     <img class="" src="{{asset('icons/icons8-barber-67.png')}}" alt="">
                     <h3 class="heading display-5 pt-3">
                         This is our <strong class="other-colour text-danger fw-bold"> Story</strong>
@@ -90,7 +90,7 @@
 
     <div class="container-fluid bg-colour">
         <div class="container">
-            <div class="row row-cols-2 g-3">
+            <div class="row row-cols-2 g-0">
                 <div class="col">
                   <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
@@ -141,9 +141,109 @@
                     </div>
                   </div>
                 </div>
+                <div class="col">
+                  <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img
+                        src="{{asset('images/agustin-fernandez-1Pmp9uxK8X8-unsplash.jpg')}}"
+                        class="w-100 shadow-1-strong rounded"
+                        alt="Mountains in the Clouds"
+                      />
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.
+                          </p>
+                          <p class="card-text">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img
+                        src="{{asset('images/agustin-fernandez-1Pmp9uxK8X8-unsplash.jpg')}}"
+                        class="w-100 shadow-1-strong rounded"
+                        alt="Mountains in the Clouds"
+                      />
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.
+                          </p>
+                          <p class="card-text">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img
+                        src="{{asset('images/agustin-fernandez-1Pmp9uxK8X8-unsplash.jpg')}}"
+                        class="w-100 shadow-1-strong rounded"
+                        alt="Mountains in the Clouds"
+                      />
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.
+                          </p>
+                          <p class="card-text">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img
+                        src="{{asset('images/agustin-fernandez-1Pmp9uxK8X8-unsplash.jpg')}}"
+                        class="w-100 shadow-1-strong rounded"
+                        alt="Mountains in the Clouds"
+                      />
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.
+                          </p>
+                          <p class="card-text">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
-        </div>
-    </div>
+      </div>
+  </div>
 
 
 @endsection
