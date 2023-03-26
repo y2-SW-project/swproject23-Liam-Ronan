@@ -4,7 +4,7 @@
 
     <div class="bg-colour container-fluid text-center text-light fw-semi-bold pb-3 p-5">
         <img class="iconOne img-fluid pb-3" src="{{asset('/icons/razor.png')}}" alt="">
-        <h2 class="heading display-4">Welcome to our Barbershop</h2>
+        <h2 class="heading display-4">Welcome to our <strong class="other-colour text-danger fw-bold"> Barbershop</strong></h2>
         <div class="row justify-content-center pb-3 pt-3">
             <div class="col-md-8">
                 <p class="para fs-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Neque morbi sed mauris facilisi pulvinar nisl elit. Lacus elementum fringilla et habitant tellus a massa</p>
@@ -12,7 +12,7 @@
         </div>
         <div class="container mb-5">
             <div class="row pt-3 justify-content-center">
-                <div class="col-md-12">
+                <div class="col-md-12 hidden">
                     <div class="row">
                         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                           <img
@@ -97,7 +97,7 @@
                   <p class="para fs-5 pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Neque morbi sed mauris facilisi pulvinar nisl elit. Lacus elementum fringilla et habitant tellus a massa</p>
               </div>
             </div>
-            <div class="row g-5">
+            <div class="row g-5 hidden">
               <div class="col-md-6">
                 <div class="card mb-3" style="max-width: 540px;">
                   <div class="row g-0">

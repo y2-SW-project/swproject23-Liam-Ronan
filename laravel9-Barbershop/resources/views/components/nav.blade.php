@@ -1,7 +1,7 @@
 <header>
         <nav class="navbar fixed-top bg-blur navbar-expand-lg py-4">
             <div class="container-xl">
-                    <a class="heading text-light navbar-brand fs-2 fw-normal" href="#">Boyz2Men</a>
+                    <a class="heading text-light navbar-brand fs-2 fw-normal" href="{{ route('home') }}">Boyz2Men</a>
                     <button
                         class="navbar-toggler bg-light"
                         type="button"
@@ -18,13 +18,13 @@
                         <div class="container">
                             <ul class="heading navbar-nav fs-5 gap-4 justify-content-center">
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="../index.html">Home</a>
+                                    <a class="nav-link text-light" href="{{ route('home') }}">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="../Pages/events.html">Bookings</a>
+                                    <a class="nav-link text-light" href="#">Bookings</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="../Pages/aboutUs.html">About</a>
+                                    <a class="nav-link text-light" href="{{ route('about') }}">About</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-light" href="#">Contact</a>

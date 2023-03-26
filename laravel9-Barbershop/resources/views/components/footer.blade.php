@@ -1,5 +1,5 @@
 <footer>
-    <div class="container-fluid bg-black pb-5 pt-4">
+    <div class="container-fluid bg-black pb-5 pt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-9">

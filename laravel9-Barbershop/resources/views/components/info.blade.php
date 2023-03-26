@@ -8,7 +8,7 @@
             </div>
             <div class="row text-center heading p-4 fs-5">
                 <hr class="border border-danger border-2 opacity-50">
-                <div class="col-md-4">
+                <div class="col-md-4 p-3">
                     <h3>Hours</h3>
                     <div class="para p-3">
                         <li class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1">
@@ -22,7 +22,7 @@
                     </li>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 p-3">
                     <h3>Contact</h3>
                     <div class="para p-3 text-decoration-underline">
                     <li class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1">
@@ -33,7 +33,7 @@
                     </li>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 p-3">
                     <h3>Location</h3>
                     <div class="para p-3">
                         <li class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1">
