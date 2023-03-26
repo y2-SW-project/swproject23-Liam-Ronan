@@ -2,11 +2,11 @@
 
 @section('content')
 
-    <div class="bg-colour container-fluid text-center text-light fw-semi-bold pb-3 pt-5">
+    <div class="bg-colour container-fluid text-center text-light fw-semi-bold pb-3 p-5">
         <img class="iconOne img-fluid pb-3" src="{{asset('/icons/razor.png')}}" alt="">
         <h2 class="heading display-4">Welcome to our Barbershop</h2>
         <div class="row justify-content-center pb-3 pt-3">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <p class="para fs-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Neque morbi sed mauris facilisi pulvinar nisl elit. Lacus elementum fringilla et habitant tellus a massa</p>
             </div>
         </div>
@@ -61,7 +61,7 @@
         </div>
     </div>
 
-    <div class="container-fluid bg-black py-5">
+    <div class="container-fluid bg-black p-5">
         <div class="container">
             <div class="row py-5">
                 <div class="col-md-6">
@@ -99,10 +99,10 @@
             </div>
             <div class="row g-5">
               <div class="col-md-6">
-                <div class="card" style="">
+                <div class="card mb-3" style="max-width: 540px;">
                   <div class="row g-0">
                     <div class="col-md-4">
-                      <img src="{{asset('/images/agustin-fernandez-1Pmp9uxK8X8-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
+                      <img src="{{asset('/images/hair-spies-wmWYla_QxFs-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8 bg-black">
                       <div class="card-body text-light text-center">
@@ -115,10 +115,10 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="card" style="">
+                <div class="card mb-3" style="max-width: 540px;">
                   <div class="row g-0">
                     <div class="col-md-4">
-                      <img src="{{asset('/images/agustin-fernandez-1Pmp9uxK8X8-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
+                      <img src="{{asset('/images/hair-spies-wmWYla_QxFs-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8 bg-black">
                       <div class="card-body text-light text-center">
@@ -131,10 +131,10 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="card" style="">
+                <div class="card mb-3" style="max-width: 540px;">
                   <div class="row g-0">
                     <div class="col-md-4">
-                      <img src="{{asset('/images/agustin-fernandez-1Pmp9uxK8X8-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
+                      <img src="{{asset('/images/hair-spies-wmWYla_QxFs-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8 bg-black">
                       <div class="card-body text-light text-center">
@@ -147,10 +147,10 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="card" style="">
+                <div class="card mb-3" style="max-width: 540px;">
                   <div class="row g-0">
                     <div class="col-md-4">
-                      <img src="{{asset('/images/agustin-fernandez-1Pmp9uxK8X8-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
+                      <img src="{{asset('/images/hair-spies-wmWYla_QxFs-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8 bg-black">
                       <div class="card-body text-light text-center">
@@ -163,10 +163,10 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="card" style="">
+                <div class="card mb-3" style="max-width: 540px;">
                   <div class="row g-0">
                     <div class="col-md-4">
-                      <img src="{{asset('/images/agustin-fernandez-1Pmp9uxK8X8-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
+                      <img src="{{asset('/images/hair-spies-wmWYla_QxFs-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8 bg-black">
                       <div class="card-body text-light text-center">
@@ -179,10 +179,10 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="card" style="">
+                <div class="card mb-3" style="max-width: 540px;">
                   <div class="row g-0">
                     <div class="col-md-4">
-                      <img src="{{asset('/images/agustin-fernandez-1Pmp9uxK8X8-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
+                      <img src="{{asset('/images/hair-spies-wmWYla_QxFs-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8 bg-black">
                       <div class="card-body text-light text-center">
@@ -195,11 +195,15 @@
                 </div>
               </div>
             </div>
-            <button class="gradient btn fs-4 my-5 btn-lg">
+            <button class="gradient btn fs-5 my-5 btn-lg">
               <a class="text-light p-3 text-decoration-none fw-semibold" href={{ route('user.bookings.create')}}>Book Appointment</a>
             </button>
-      </div>
-  </div>
+        </div>
+    </div>
+
+    <x-info></x-info>
+
+    <x-work></x-work>
 
 
 @endsection

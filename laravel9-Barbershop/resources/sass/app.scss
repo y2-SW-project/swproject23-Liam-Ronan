@@ -14,7 +14,7 @@
 $secondary: #0E171B;
 $date-color: #848484;
 $highlight-colour: #cc5d57;
-$bg-colour: #111111;
+$bg-colour: #080808;
 
 //Custom fonts
 $font-heading: "Lora";
@@ -74,6 +74,10 @@ $linear: linear-gradient(160deg, $highlight-colour 0%, #000000 100%);
 .iconOne {
     width: 100px;
     height: 100px;
+}
+
+.imageCards {
+    height: fit-content;
 }
 
 .bg {

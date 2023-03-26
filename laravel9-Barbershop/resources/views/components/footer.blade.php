@@ -29,12 +29,7 @@
                         <li
                             class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
                         >
-                            Mon-Wed: 9:30am - 6:00pm
-                        </li>
-                        <li
-                            class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
-                        >
-                            Thurs-Fri: 9:30am - 7:00pm
+                            Mon-Fri: 9:30am - 6:00pm
                         </li>
                         <li
                             class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
@@ -59,7 +54,7 @@
                         <li
                             class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
                         >
-                            Wicklow,
+                            Wicklow
                         </li>
                         <li
                             class="list-group-item bg-black text-light fs-5 border-0 px-0 py-1"
@@ -78,7 +73,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <hr class="border border-2">
+                <hr class="border border-danger border-2 opacity-50">
                 <p class="body mt-2 text-light">Boyz2Men &copy; 2023</p>
             </div>
         </div>
