@@ -86,6 +86,12 @@ $linear: linear-gradient(160deg, $highlight-colour 0%, #000000 100%);
     background-blend-mode: overlay;
 }
 
+.bg2 {
+    background:url(../../public/images/andre-hunter-o48W6ydWSUA-unsplash.jpg) center / cover no-repeat;
+    background-color:#424242; 
+    background-blend-mode: overlay;
+}
+
 .bg-blur {
     background-color: rgba($color: #000000, $alpha: 0.55);
 }
