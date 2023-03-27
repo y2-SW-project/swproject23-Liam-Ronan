@@ -16,8 +16,8 @@ class BarberSeeder extends Seeder
     public function run()
     {
         Barber::factory()
-        ->times(3)
-        ->hasBooking(4)
+        ->times(4)
+        ->hasBooking(2)
         ->create();
     }
 }

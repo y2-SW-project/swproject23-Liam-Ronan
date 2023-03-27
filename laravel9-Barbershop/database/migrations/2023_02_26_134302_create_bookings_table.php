@@ -17,10 +17,6 @@ return new class extends Migration
             $table->id();
             $table->date('date');
             $table->time('time');
-            $table->time('duration');
-            $table->string('service');
-            $table->longText('description');
-            $table->string('price');
             $table->timestamps();
         });
     }

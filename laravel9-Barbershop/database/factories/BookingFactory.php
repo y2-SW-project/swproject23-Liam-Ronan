@@ -18,11 +18,7 @@ class BookingFactory extends Factory
     {
         return [
             'date' => $this->faker->date(),
-            'time' => $this->faker->time(),
-            'duration' => $this->faker->time(),
-            'service' => $this->faker->sentence(),
-            'description' => $this->faker->paragraph(3),
-            'price' => $this->faker->randomDigit()
+            'time' => $this->faker->time()
         ];
     }
 }

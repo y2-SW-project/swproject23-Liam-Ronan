@@ -20,7 +20,7 @@ class BarberFactory extends Factory
             'first_name' => $this->faker->name,
             'last_name' => $this->faker->name,
             'email' => $this->faker->email(),
-            'phone_number' => $this->faker->numberBetween(0,9)
+            'phone_number' => $this->faker->phoneNumber()
         ];
     }
 }

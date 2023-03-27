@@ -27,6 +27,7 @@ class UserSeeder extends Seeder
         $admin->name = 'Liam Ronan';
         $admin->email = 'liamronan16@gmail.com';
         $admin->password = Hash::make('password');
+        $admin->phone_number = "0867132313";
         $admin->save();
 
         /* Attaching Admin role to User that was created above*/
@@ -36,6 +37,7 @@ class UserSeeder extends Seeder
         $user->name = "Jane Doe";
         $user->email = 'jandedoe@gmail.com';
         $user->password = Hash::make('password');
+        $user->phone_number = "0853458675";
         $user->save();
 
         /* Attaching User role to this user */

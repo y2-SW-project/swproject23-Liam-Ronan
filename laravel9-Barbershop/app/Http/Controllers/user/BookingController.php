@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Auth;
 class BookingController extends Controller
 {
     public function index() {
-        $user = Auth::user();
-        $user->authorizeRoles('admin');
+        // $user = Auth::user();
+        // $user->authorizeRoles('admin');
 
         $bookings = Booking::all();
 
@@ -23,8 +23,8 @@ class BookingController extends Controller
     }
 
     public function create() {
-        $user = Auth::user();
-        $user->authorizeRoles('admin');
+        // $user = Auth::user();
+        // $user->authorizeRoles('admin');
 
         return view('user.bookings.create');
     }

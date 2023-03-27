@@ -30,7 +30,7 @@
                       
                         <div class="col-lg-4 mb-4 mb-lg-0">
                           <img
-                            src="{{asset('images/agustin-fernandez-1Pmp9uxK8X8-unsplash.jpg')}}"
+                            src="{{asset('images/agustin-fernandez-1Pmp9uxK8X8-unsplash-min.jpg')}}"
                             class="w-100 shadow-1-strong rounded mb-4"
                             alt="Mountains in the Clouds"
                           />

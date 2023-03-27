@@ -17,10 +17,10 @@
                         <a href="#" class="text-light heading"><li class="list-group-item bg-black text-light fs-5 border-0 px-0">Contact</li></a>
                     </ul>
                     <div class="col-md-8 my-4">
-                        <a class="social" href="#"><img class="img-fluid mx-2" src="social/FB.png" alt="Facebook"></a>
-                        <a class="social" href="#"><img class="img-fluid mx-2" src="social/instagram.png" alt="instagram"></a>
-                        <a class="social" href="#"><img class="img-fluid mx-2" src="social/linkedin.png" alt="LinkedIn"></a>
-                        <a class="social" href="#"><img class="img-fluid mx-2" src="social/Twitter.png" alt="Twitter"></a>
+                        <a class="social" href="#"><img class="img-fluid mx-2" src="../../social/FB.png" alt="Facebook"></a>
+                        <a class="social" href="#"><img class="img-fluid mx-2" src="../../social/instagram.png" alt="instagram"></a>
+                        <a class="social" href="#"><img class="img-fluid mx-2" src="../../social/linkedin.png" alt="LinkedIn"></a>
+                        <a class="social" href="#"><img class="img-fluid mx-2" src="../../social/Twitter.png" alt="Twitter"></a>
                     </div>	
                 </div>
                 <div class="col-md-3">

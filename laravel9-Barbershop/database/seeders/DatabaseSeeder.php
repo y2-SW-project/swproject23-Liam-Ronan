@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Booking;
+use App\Models\Services;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(RoleSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(BarberSeeder::class);
+        $this->call(ServicesSeeder::class);
        
         /*  \App\Models\User::factory(10)->create(); */
 

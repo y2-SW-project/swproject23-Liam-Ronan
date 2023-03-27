@@ -29,4 +29,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 
-Route::resource('user/bookings', BookingController::class)->middleware(['auth'])->names('user.bookings');
+Route::resource('user/bookings', BookingController::class)->names('user.bookings');

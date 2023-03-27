@@ -14,4 +14,5 @@ class Booking extends Model
     public function barber() {
         return $this->belongsTo(Barber::class);
     }
+
 }
