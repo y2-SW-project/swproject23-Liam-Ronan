@@ -2,13 +2,23 @@
 
 namespace App\Http\Controllers\user;
 
+use App\Models\Barber;
 use App\Models\Booking;
+use App\Models\Services;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
+
+    public function home(){
+
+        $services = Services::all();
+
+        return view('home', compact('services'));
+    }
+
     public function index() {
         // $user = Auth::user();
         // $user->authorizeRoles('admin');
@@ -26,13 +36,14 @@ class BookingController extends Controller
         // $user = Auth::user();
         // $user->authorizeRoles('admin');
 
-        return view('user.bookings.create');
+        $barbers = Barber::all();
+        return view('user.bookings.create')->with('barbers', $barbers);
     }
 
     public function store(Request $request) {
 
-        $user = Auth::user();
-        $user->authorizeRoles('admin');
+        // $user = Auth::user();
+        // $user->authorizeRoles('admin');
 
         $request->validate([
             'date' => 'required',
@@ -54,23 +65,23 @@ class BookingController extends Controller
             'barber_id' => $request->barber_id
         ]);
 
-        $booking->create();
+        $booking->barbers()->attach($request->barbers);
 
         return to_route('user.bookings.index')->with('message', 'Your booking has been confirmed');
     }
 
     public function edit(Booking $booking) {
 
-        $user = Auth::user();
-        $user->authorizeRoles('admin');
+        // $user = Auth::user();
+        // $user->authorizeRoles('admin');
 
         return view('user.bookings.edit', ['booking' => $booking]);
     }
 
     public function update(Request $request, Booking $booking) {
 
-        $user = Auth::user();
-        $user->authorizeRoles('admin');
+        // $user = Auth::user();
+        // $user->authorizeRoles('admin');
 
         $formFields = $request->validate([
             'date' => 'required',
@@ -88,8 +99,8 @@ class BookingController extends Controller
     }
 
     public function destroy(Booking $booking) {
-        $user = Auth::user();
-        $user->authorizeRoles('admin');
+        // $user = Auth::user();
+        // $user->authorizeRoles('admin');
 
         $booking->delete();
         return to_route('user.projects.index')->with('message', 'Booking has been cancelled');

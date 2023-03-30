@@ -7,6 +7,8 @@ namespace Database\Seeders;
 use App\Models\Booking;
 use App\Models\Services;
 use Illuminate\Database\Seeder;
+use Database\Seeders\BarberSeeder;
+use Database\Seeders\ServicesSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,15 +22,15 @@ class DatabaseSeeder extends Seeder
 
         $this->call(RoleSeeder::class);
         $this->call(UserSeeder::class);
-        $this->call(BarberSeeder::class);
         $this->call(ServicesSeeder::class);
-       
+        $this->call(BarberSeeder::class);
+
         /*  \App\Models\User::factory(10)->create(); */
 
-        
 
 
-        
+
+
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',

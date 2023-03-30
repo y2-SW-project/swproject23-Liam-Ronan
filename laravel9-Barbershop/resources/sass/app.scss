@@ -37,25 +37,6 @@ $linear: linear-gradient(160deg, $highlight-colour 0%, #000000 100%);
     background-color: $bg-colour;
 }
 
-// .slider {
-//     text-decoration: none;
-//     display: relative;
-// }
-
-// .slider::after {
-//     content: '';
-//     position: absolute;
-//     left: 0;
-//     bottom: 0;
-//     width: 100%;
-//     height: 2px;
-//     background-color: $highlight-colour;
-
-//     transform: scaleX(0.2);
-//     transform-origin: left;
-//     transition: transform 250ms ease-in;
-// }
-
 .slider:hover::after {
     transform: scaleX(1);
 }
@@ -115,6 +96,12 @@ $linear: linear-gradient(160deg, $highlight-colour 0%, #000000 100%);
 
 .bg4 {
     background:url(../../public/images/pexels-mídia-897270.jpg) center / cover no-repeat;
+    background-color:#323232; 
+    background-blend-mode: overlay;
+}
+
+.bg5 {
+    background:url(../../public/images/andre-reis-1_DAlXy0wng-unsplash.jpg) center / cover no-repeat;
     background-color:#323232; 
     background-blend-mode: overlay;
 }
