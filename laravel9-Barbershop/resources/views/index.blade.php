@@ -88,7 +88,7 @@
         </div>
     </div>
 
-    <div class="container-fluid bg-colour">
+    <div class="container-fluid bg-colour text-center">
         <div class="container text-center text-light p-5">
           <img class="iconOne img-fluid pb-3" src="{{asset('/icons/icons8-cut-67.png')}}" alt="">
           <h2 class="heading display-4 pb-3">We Cut Hair, not <strong class="other-colour text-danger fw-bold"> Corners</strong></h2>
@@ -98,108 +98,26 @@
               </div>
             </div>
             <div class="row g-5 hidden">
-              <div class="col-md-6">
-                <div class="card mb-3" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-4">
-                      <img src="{{asset('/images/hair-spies-wmWYla_QxFs-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8 bg-black">
-                      <div class="card-body text-light text-center">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    @unless(count($services) == 0)
+
+                    @foreach ($services as $service)
+                    <div class="col-md-6 bg-black">
+                      <div class="card mb-3 p-3 text-light text-start bg-black border border-danger-subtle" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <x-service-card :service="$service"/>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                    @endforeach
+
+                    @endunless
+
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card mb-3" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-4">
-                      <img src="{{asset('/images/hair-spies-wmWYla_QxFs-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8 bg-black">
-                      <div class="card-body text-light text-center">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card mb-3" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-4">
-                      <img src="{{asset('/images/hair-spies-wmWYla_QxFs-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8 bg-black">
-                      <div class="card-body text-light text-center">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card mb-3" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-4">
-                      <img src="{{asset('/images/hair-spies-wmWYla_QxFs-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8 bg-black">
-                      <div class="card-body text-light text-center">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card mb-3" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-4">
-                      <img src="{{asset('/images/hair-spies-wmWYla_QxFs-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8 bg-black">
-                      <div class="card-body text-light text-center">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card mb-3" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-4">
-                      <img src="{{asset('/images/hair-spies-wmWYla_QxFs-unsplash.jpg')}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8 bg-black">
-                      <div class="card-body text-light text-center">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
             <button class="gradient btn fs-5 my-5 btn-lg">
               <a class="text-light p-3 text-decoration-none fw-semibold" href={{ route('user.bookings.create')}}>Book Appointment</a>
             </button>
         </div>
-    </div>
 
     <x-info></x-info>
 

@@ -12,9 +12,9 @@
 
 //Custom Colours
 $secondary: #0E171B;
-$date-color: #848484;
+$date-color: #2e2e2e;
 $highlight-colour: #cc5d57;
-$bg-colour: #080808;
+$bg-colour: #242424;
 
 //Custom fonts
 $font-heading: "Lora";
@@ -70,6 +70,11 @@ $linear: linear-gradient(160deg, $highlight-colour 0%, #000000 100%);
 .iconOne {
     width: 100px;
     height: 100px;
+}
+
+.iconTwo {
+    width: 50px;
+    height: 50px;
 }
 
 .imageCards {

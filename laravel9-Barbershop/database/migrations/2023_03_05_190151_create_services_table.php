@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->string('haircut');
-            $table->string('description');
+            $table->longText('description');
             $table->float('price');
             $table->string('duration');
             $table->timestamps();

@@ -12,13 +12,6 @@ use Illuminate\Support\Facades\Auth;
 class BookingController extends Controller
 {
 
-    public function home(){
-
-        $services = Services::all();
-
-        return view('home', compact('services'));
-    }
-
     public function index() {
         // $user = Auth::user();
         // $user->authorizeRoles('admin');
@@ -37,7 +30,8 @@ class BookingController extends Controller
         // $user->authorizeRoles('admin');
 
         $barbers = Barber::all();
-        return view('user.bookings.create')->with('barbers', $barbers);
+        $services = Services::all();
+        return view('user.bookings.create')->with('barbers', $barbers)->with('services', $services);
     }
 
     public function store(Request $request) {
@@ -45,27 +39,22 @@ class BookingController extends Controller
         // $user = Auth::user();
         // $user->authorizeRoles('admin');
 
+        // dd($request);
+
         $request->validate([
             'date' => 'required',
             'time' => 'required',
-            'duration' => 'required',
-            'service' => 'required',
-            'description' => 'required',
-            'price' => 'required',
-            'barber_id' => 'required'
+            'barber_id' => 'required',
+            'services_id' => ['required', 'exists:services,id']
         ]);
 
         $booking = Booking::create([
             'date' => $request->date,
             'time' => $request->time,
-            'duration' => $request->duration,
-            'service' => $request->service,
-            'description' => $request->description,
-            'price' => $request->price,
-            'barber_id' => $request->barber_id
+            'barber_id' => $request->barber_id,
         ]);
 
-        $booking->barbers()->attach($request->barbers);
+        $booking->services()->attach($request->services);
 
         return to_route('user.bookings.index')->with('message', 'Your booking has been confirmed');
     }
@@ -74,8 +63,10 @@ class BookingController extends Controller
 
         // $user = Auth::user();
         // $user->authorizeRoles('admin');
+        $barbers = Barber::all();
+        $services = Services::all();
 
-        return view('user.bookings.edit', ['booking' => $booking]);
+        return view('user.bookings.edit', ['booking' => $booking])->with('barbers', $barbers)->with('services', $services);
     }
 
     public function update(Request $request, Booking $booking) {
@@ -94,6 +85,8 @@ class BookingController extends Controller
         ]);
 
         $booking->update($formFields);
+
+        $booking->services()->attach($request->services);
 
         return to_route('user.bookings.index')->with('message', 'Booking Updated successfully');
     }
