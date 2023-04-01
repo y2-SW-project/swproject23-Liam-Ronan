@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Bookings</title>
 		<link rel="stylesheet" href="resources/css/app.css" />
+        <script src="//unpkg.com/alpinejs" defer></script>
 		@vite(['resources/js/app.js'])
 	</head>
 	<body>
@@ -31,6 +32,13 @@
                                 </div>
                             </div>
                             @endforeach
+                            @else
+                                <p class="para">No Bookings found</p>
+                            @endunless
+
+                            <div class="text-light">
+                                {{$bookings->links()}}
+                            </div>
                             
                             <div class="text-center">
                                 <h3 class="heading">Book an Appointment</h3>
@@ -41,12 +49,6 @@
                     </div>
                 </div>
             </div>
-               
-
-
-                @else
-                    <p class="para">No Bookings found</p>
-                @endunless
 
             <x-info></x-info>
             <x-work></x-work>
@@ -54,5 +56,7 @@
         </main>
         
         <x-footer></x-footer>
+        <x-flash-message></x-flash-message>
+
     </body>
 </html>

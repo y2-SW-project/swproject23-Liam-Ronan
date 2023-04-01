@@ -1,5 +1,5 @@
 @props(['service'])
-<a href="#" class="text-decoration-none text-light">
+<a href="{{route('user.services.show', $service)}}" class="text-decoration-none text-light">
   <h5 class="heading fs-4 card-title">{{$service->haircut}}</h5>
     <div class="col-sm-6">
       <hr class="border border-danger border-1 opacity-50">

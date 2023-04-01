@@ -18,7 +18,7 @@ class ServicesSeeder extends Seeder
     {
         $services = [
             [
-                'haircut' => 'Taper Haircut',
+                'haircut' => 'Taper',
                 'description' => 'A taper haircut works well with the majority of mens hair cut styles. It keeps the hair on the sides neatly trimmed while drawing attention to the top. So, you are free to choose any style, be it a simple Ivy League or a more elaborate pompadour.',
                 'price' => 20.00,
                 'duration' => '30 mins',
@@ -43,13 +43,13 @@ class ServicesSeeder extends Seeder
                 'duration' => '30 mins',
             ],
             [
-                'haircut' => 'Ivy League Haircut',
+                'haircut' => 'Ivy League',
                 'description' => 'An Ivy League haircut is an elongated version of a crew cut. Because the hair on top is relatively long, you can define it with a parting. To open up your face and make it visually longer, push the front section of your hair upward. This will create a subtle pompadour on top.',
                 'price' => 12.00,
                 'duration' => '30 mins',
             ],
             [
-                'haircut' => 'Long Top Short Sides',
+                'haircut' => 'Long Top & Short Side',
                 'description' => 'A long top short sides is one of those types of hairstyles for men that will never go out of fashion. This is a timeless classic that looks appropriate in absolutely any ambiance. Besides, it can be pulled off on any hair type and looks flattering on all face shapes.',
                 'price' => 12.00,
                 'duration' => '30 mins',

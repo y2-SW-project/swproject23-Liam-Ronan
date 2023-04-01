@@ -10,7 +10,8 @@ class Services extends Model
 {
     use HasFactory;
 
-    public function booking() {
+    public function booking()
+    {
         return $this->hasMany(Booking::class);
     }
 }

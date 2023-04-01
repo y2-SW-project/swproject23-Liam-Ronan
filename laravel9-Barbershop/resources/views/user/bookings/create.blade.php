@@ -17,7 +17,7 @@
 
 			<div class="container-fluid bg-colour p-5">
 				<div class="container d-flex justify-content-center">
-					<div class="row">
+					<div class="row bg-black p-5 rounded-5">
 						<div class="text-light text-center pt-2">
 							<img class="iconOne img-fluid" src="{{asset('/icons/icons8-imperial-mustache-64.png')}}" alt="">
 							<h3 class="heading display-5">
@@ -36,7 +36,7 @@
 								<div class="mb-3 pt-3">
 									<div class="cs-form">
 										<label for="time">Time</label>
-										<input type="time" class="form-control" name="time"/>
+										<input type="time" class="form-control" name="time" value="{{old('time')}}"/>
 
 										@error('time')
 											<p class="text-danger para mt-1">{{$message}}</p>

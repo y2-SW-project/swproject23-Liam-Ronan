@@ -1,9 +1,10 @@
 <?php
 
+use App\Models\Services;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\user\ServiceController;
 use App\Http\Controllers\user\BookingController;
-use App\Models\Services;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,9 @@ Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->nam
 
 Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 
+Route::resource('user/services', ServiceController::class)->names('user.services');
+
 Route::resource('user/bookings', BookingController::class)->names('user.bookings');
+
+
+

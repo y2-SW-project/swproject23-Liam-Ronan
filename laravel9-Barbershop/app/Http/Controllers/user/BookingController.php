@@ -17,7 +17,7 @@ class BookingController extends Controller
         // $user = Auth::user();
         // $user->authorizeRoles('admin');
 
-        $bookings = Booking::all();
+        $bookings = Booking::with('barber', 'services')->latest()->simplePaginate(4);
 
         return view('user.bookings.index')->with('bookings', $bookings);
     }
@@ -60,9 +60,10 @@ class BookingController extends Controller
         // dd($request);
 
         if ($booking) {
-            return redirect()->route('user.bookings.index')->with('success', 'Booking created successfully!');
-        } else {
-            return redirect()->back()->withInput()->with('error', 'Unable to create booking at this time. Please try again later.');
+            return redirect()->route('user.bookings.index')->with('message', 'Booking created successfully, We look forward to seeing you!');
+        } 
+        else {
+            return redirect()->back()->withInput()->with('message', 'Unable to create booking at this time. Please try again later.');
         }
     }
 
@@ -86,10 +87,6 @@ class BookingController extends Controller
         $formFields = $request->validate([
             'date' => 'required',
             'time' => 'required',
-            'duration' => 'required',
-            'service' => 'required',
-            'description' => 'required',
-            'price' => 'required',
             'barber_id' => 'required'
         ]);
 
