@@ -86,6 +86,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 
             <x-info></x-info>
             <x-work></x-work>

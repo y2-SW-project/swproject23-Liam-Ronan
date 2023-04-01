@@ -110,6 +110,8 @@
                     </div>
                     @endforeach
 
+                    @else
+                      <p class="para">No services found</p>
                     @endunless
 
                 </div>
