@@ -32,6 +32,12 @@
                             </div>
                             @endforeach
                             
+                            <div class="text-center">
+                                <h3 class="heading">Book an Appointment</h3>
+                                <button class="gradient btn fs-5 my-2">
+                                    <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('user.bookings.create')}}">Book Appointment</a>
+                                </button>	
+                            </div>
                     </div>
                 </div>
             </div>

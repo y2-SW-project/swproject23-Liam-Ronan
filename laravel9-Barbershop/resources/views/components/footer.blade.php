@@ -66,7 +66,7 @@
                 <div class="col-md-3">
                     <h3 class="heading">Book an Appointment</h3>
                     <button class="gradient btn fs-5 my-4">
-                        <a class="text-light p-3 text-decoration-none fw-semibold" href="../Pages/events.html">Book Appointment</a>
+                        <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('user.bookings.create')}}">Book Appointment</a>
                     </button>	
                 </div>
             </div>

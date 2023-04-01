@@ -6,16 +6,17 @@ use App\Models\Barber;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\Services;
+use Carbon\Carbon;
 
 class Booking extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'date', 'time', 'barber_id', 'services_id'
-    ];
+    // protected $fillable = [
+    //     'date', 'time', 'barber_id', 'services_id'
+    // ];
 
-    protected $guarded = [];
+    // protected $guarded = [];
 
     public function barber()
     {
@@ -26,5 +27,4 @@ class Booking extends Model
     {
         return $this->belongsTo(Services::class);
     }
-
 }

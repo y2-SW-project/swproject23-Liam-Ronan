@@ -61,7 +61,7 @@ class ServicesSeeder extends Seeder
                 'duration' => '30 mins',
             ],
             [
-                'haircut' => 'Skin Fade + Spiky Texture',
+                'haircut' => 'Skin Fade',
                 'description' => 'Skin fade is another way to add some more drama to your outlook. The truth is that this type of hair fade does not involve much hair at that point since the cut is actually incorporated into your skin. The best way to pair such a fade would be with short to medium hair on top and quite sick facial hair.',
                 'price' => 15.00,
                 'duration' => '30 mins',

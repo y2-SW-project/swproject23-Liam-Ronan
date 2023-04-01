@@ -101,8 +101,8 @@
                     @unless(count($services) == 0)
 
                     @foreach ($services as $service)
-                    <div class="col-md-6 bg-black">
-                      <div class="card mb-3 p-3 text-light text-start bg-black border border-danger-subtle" style="max-width: 540px;">
+                    <div class="col-md-6">
+                      <div class="card mb-3 p-3 text-light text-start bg-black" style="max-width: 540px;">
                         <div class="row g-0">
                           <x-service-card :service="$service"/>
                         </div>
