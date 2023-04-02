@@ -4,7 +4,7 @@
         <h2 class="heading display-4 pb-3">Interested in joining the <strong class="other-colour text-danger fw-bold"> Team?</strong></h2>
       </div>
       <button class="gradient btn fs-5 my-3 btn-lg">
-        <a class="text-light p-3 text-decoration-none fw-semibold" href="#">Inquire Now</a>
+        <a class="text-light p-3 text-decoration-none fw-semibold" href="#">Enquire Now</a>
       </button>
     </div>
 </div>

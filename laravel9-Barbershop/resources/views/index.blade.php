@@ -80,7 +80,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur.
                         </p>
                         <button class="gradient btn fs-5 my-2">
-                            <a class="text-light p-3 text-decoration-none fw-semibold" href={{ route('user.bookings.create')}}>Learn More</a>
+                            <a class="text-light p-3 text-decoration-none fw-semibold" href={{ route('about')}}>Learn More</a>
                         </button>
                     </div>
                 </div>

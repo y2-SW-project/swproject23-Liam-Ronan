@@ -61,40 +61,17 @@
             <div class="container-fluid bg-colour p-5">
               <div class="container text-center">
                 <img class="iconOne img-fluid pb-1" src="{{asset('/icons/icons8-imperial-mustache-64.png')}}" alt="">
-               <h3 class="heading display-4 text-center text-light">Meet the <strong class="other-colour text-danger fw-bold"> Team</strong></h3>
-                <div class="row pt-5">
-                  <div class="col-md-6">
-                    <img src="{{asset('/images/pexels-stefan-lorentz-668196.jpg')}}" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="col-md-6 text-light text-center">
-                    <img class="img-fluid pb-3 px-5" src="{{asset('icons/icons8-barber-64.png')}}" alt="">
-                    <div class="para text-center px-5">
-                        <h5 class="heading display-5 text-center text-light">Michael Dunlop</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Neque morbi sed mauris facilisi pulvinar nisl elit. Lacus elementum fringilla et habitant tellus a massa 
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur.
-                        </p>
-                    </div>
-                  </div>
-                  <hr class="border border-danger border-2 opacity-50 my-5">
-                  <div class="col-md-6 text-light text-center pt-3">
-                    <img class="img-fluid pb-3" src="{{asset('icons/icons8-barber-64.png')}}" alt="">
-                    <div class="para text-center px-5">
-                        <h5 class="heading display-5 text-center text-light">James Ronan</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Neque morbi sed mauris facilisi pulvinar nisl elit. Lacus elementum fringilla et habitant tellus a massa 
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur.
-                        </p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 pt-5">
-                    <img src="{{asset('/images/pexels-mídia-897270.jpg')}}" class="d-block w-100" alt="...">
-                  </div>
-                </div>
+                <h3 class="heading display-4 text-center text-light">Meet the <strong class="other-colour text-danger fw-bold"> Team</strong></h3>
+                
+                @unless(count($barbers) == 0)
+
+                @foreach ($barbers as $barber)
+                    <x-barber-card :barber="$barber"/>
+                @endforeach
+
+                @else
+                  <p class="para">No Barbers Found</p>
+                @endunless
               </div>
             </div>
 

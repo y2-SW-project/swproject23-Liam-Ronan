@@ -16,8 +16,10 @@ return new class extends Migration
         Schema::create('barbers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->longText('bio');
             $table->string('email')->unique();
             $table->string('phone_number');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

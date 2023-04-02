@@ -26,20 +26,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-
         $services = Services::simplePaginate(4);
 
         return view('index')->with('services', $services);
-      
-    }
-
-    public function paginate() {
-        
     }
 
     public function about()
     {
-        return view('about');
+        $barbers = Barber::all();
+
+        return view('about')->with('barbers', $barbers);;
     }
 
     public function contact()

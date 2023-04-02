@@ -19,6 +19,7 @@ class BarberFactory extends Factory
         return [
             'name' => $this->faker->name,
             'email' => $this->faker->email(),
+            'bio' => $this->faker->paragraph(40),
             'phone_number' => $this->faker->phoneNumber()
         ];
     }

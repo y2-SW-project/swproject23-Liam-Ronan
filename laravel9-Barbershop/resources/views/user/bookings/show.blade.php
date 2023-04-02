@@ -52,13 +52,13 @@
                                         <a class="text-light text-decoration-none fw-semibold" href="{{ route('user.bookings.edit', $booking)}}">Edit Appointment</a>
                                 </button>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <form method="POST" action="{{route('user.bookings.destroy', $booking)}}">
                                         {{-- Using csrf to prevent Cross-site request forgeries --}}
                                         @csrf
                                         {{-- Delete methods --}}
                                         @method('DELETE')
-                                        <button class="gradient btn my-1 btn-md" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="gradient btn my-1 btn-md">
                                             <a class="text-light text-decoration-none fw-semibold">Cancel Appointment</a>
                                         </button>      
                                     </form>  

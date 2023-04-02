@@ -87,14 +87,18 @@ class BookingController extends Controller
         $formFields = $request->validate([
             'date' => 'required',
             'time' => 'required',
-            'barber_id' => 'required'
+            'barber_id' => 'required',
+            'service_id' => 'required' | 'exists:services,id'
         ]);
 
         $booking->update($formFields);
 
-        $booking->services()->attach($request->services);
-
-        return to_route('user.bookings.index')->with('message', 'Booking Updated successfully');
+        if ($booking) {
+            return redirect()->route('user.bookings.index')->with('message', 'Your booking has been Updated');
+        } 
+        else {
+            return redirect()->back()->withInput()->with('message', 'Unable to Update booking at this time. Please try again later.');
+        }
     }
 
     public function destroy(Booking $booking)
