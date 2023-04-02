@@ -103,6 +103,12 @@ class BookingController extends Controller
         // $user->authorizeRoles('admin');
 
         $booking->delete();
-        return to_route('user.projects.index')->with('message', 'Booking has been cancelled');
+
+        if ($booking) {
+            return redirect()->route('user.bookings.index')->with('message', 'Your booking has been cancelled');
+        } 
+        else {
+            return redirect()->back()->withInput()->with('message', 'Unable to delete booking at this time. Please try again later.');
+        }
     }
 }

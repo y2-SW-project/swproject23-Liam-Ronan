@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-
+use App\Models\Barber;
 use App\Models\Services;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -68,6 +68,11 @@ class ServicesSeeder extends Seeder
             ],
             // Add more services as needed
         ];
+
+        foreach(Barber::all() as $barber) {
+            $services = Services::inRandomOrder()->take(rand(1,3))->pluck('id');
+            $barber->barber()->attach($services);
+        }
 
         foreach ($services as $service) {
             Services::create($service);

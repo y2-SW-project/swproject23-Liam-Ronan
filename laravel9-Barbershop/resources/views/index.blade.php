@@ -97,7 +97,7 @@
                   <p class="para fs-5 pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Neque morbi sed mauris facilisi pulvinar nisl elit. Lacus elementum fringilla et habitant tellus a massa</p>
               </div>
             </div>
-            <div class="row g-5 hidden">
+            <div class="row g-5 hidden" id="pagination-Fixed">
                     @unless(count($services) == 0)
 
                     @foreach ($services as $service)
@@ -114,6 +114,9 @@
                       <p class="para">No services found</p>
                     @endunless
 
+                    <div class="text-light" id="pagination-links">
+                      {{$services->links()}}
+                    </div>
                 </div>
             </div>
             <button class="gradient btn fs-5 my-5 btn-lg">

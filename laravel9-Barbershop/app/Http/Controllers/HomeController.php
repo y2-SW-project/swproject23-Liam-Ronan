@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Barber;
+use App\Models\Booking;
 use App\Models\Services;
 use Illuminate\Http\Request;
 
@@ -25,10 +27,14 @@ class HomeController extends Controller
     public function index()
     {
 
-        $services = Services::all();
+        $services = Services::simplePaginate(4);
 
         return view('index')->with('services', $services);
       
+    }
+
+    public function paginate() {
+        
     }
 
     public function about()

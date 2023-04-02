@@ -24,7 +24,7 @@
                   </div>
                   <div class="col-md-6 text-light text-start d-flex align-items-center">
                     <div class="col-md-12">
-                        <hr class="border border-danger border-2 opacity-50 mb-5">
+                        <hr class="border border-danger border-2 opacity-50 mb-4">
                         <div class="para px-3">
                             <p>
                                 {{$services->description}};
@@ -34,9 +34,12 @@
                             </p>
                             <p>
                                 Total Cost of <strong class="fw-bolder fs-5 other-colour">&euro;{{$services->price}}.00</strong>
-                            </p>                    
+                            </p>    
+                            <button class="gradient btn my-2 btn-md">
+                              <a class="text-light text-decoration-none fw-semibold" href="{{ route('user.bookings.create')}}">Book Haircut</a>
+                          </button>                
                         </div>
-                        <hr class="border border-danger border-2 opacity-50 mt-5">
+                        <hr class="border border-danger border-2 opacity-50 mt-4">
                     </div>
                   </div>
                 </div>
