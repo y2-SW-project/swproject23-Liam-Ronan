@@ -12,7 +12,11 @@
             <div class="row py-3">
                 <div class="col-md-3">
                     <ul class="list-group text-light text-decoration-underline">
-                        <a href="{{ route('user.bookings.index')}}" class="text-light heading"><li class="list-group-item bg-black text-light fs-5 border-0 px-0">Bookings</li></a>
+                        @if (Auth::user()->hasRole('user'))
+                            <a href="{{ route('user.bookings.index')}}" class="text-light heading"><li class="list-group-item bg-black text-light fs-5 border-0 px-0">Bookings</li></a>
+                        @else
+                            <a href="{{ route('admin.bookings.index')}}" class="text-light heading"><li class="list-group-item bg-black text-light fs-5 border-0 px-0">Bookings</li></a>
+                        @endif
                         <a href="{{ route('about') }}" class="text-light heading"><li class="list-group-item bg-black text-light fs-5 border-0 px-0">About</li></a>
                         <a href="{{ route('contact') }}" class="text-light heading"><li class="list-group-item bg-black text-light fs-5 border-0 px-0">Contact</li></a>
                     </ul>
@@ -65,9 +69,16 @@
                 </div>
                 <div class="col-md-3">
                     <h3 class="heading">Book an Appointment</h3>
-                    <button class="gradient btn fs-5 my-4">
-                        <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('user.bookings.create')}}">Book Appointment</a>
-                    </button>	
+                    @if(Auth::user()->hasRole('user'))
+                        <button class="gradient btn fs-5 my-4">
+                            <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('user.bookings.create')}}">Book Appointment</a>
+                        </button>	
+                    @else
+                        <button class="gradient btn fs-5 my-4">
+                            <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('admin.bookings.create')}}">Book Appointment</a>
+                        </button>	
+                    @endif
+ 
                 </div>
             </div>
         </div>

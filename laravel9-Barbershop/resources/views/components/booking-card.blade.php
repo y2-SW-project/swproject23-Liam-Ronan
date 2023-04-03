@@ -13,9 +13,16 @@
                 <hr class="border border-danger border-1 opacity-50">
             </div>
         </div>
-        <button class="gradient btn btn-md my-4">
-            <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('user.bookings.show', $booking)}}">View Details</a>
-        </button>
+        
+        @if(Auth::user()->hasRole('user'))
+            <button class="gradient btn btn-md my-4">
+                <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('user.bookings.show', $booking)}}">View Details</a>
+            </button>
+        @else
+            <button class="gradient btn btn-md my-4">
+                <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('admin.bookings.show', $booking)}}">View Details</a>
+            </button>
+        @endif
     
 
 

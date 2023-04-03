@@ -14,8 +14,8 @@ class BookingController extends Controller
 
     public function index()
     {
-        // $user = Auth::user();
-        // $user->authorizeRoles('admin');
+        $user = Auth::user();
+        $user->authorizeRoles('user');
 
         $bookings = Booking::with('barber', 'services')->latest()->simplePaginate(4);
 
@@ -24,13 +24,16 @@ class BookingController extends Controller
 
     public function show(Booking $booking)
     {
+        $user = Auth::user();
+        $user->authorizeRoles('user');
+
         return view('user.bookings.show')->with('booking', $booking);
     }
 
     public function create()
     {
-        // $user = Auth::user();
-        // $user->authorizeRoles('admin');
+        $user = Auth::user();
+        $user->authorizeRoles('user');
 
         $barbers = Barber::all();
         $services = Services::all();
@@ -40,8 +43,8 @@ class BookingController extends Controller
     public function store(Request $request)
     {
 
-        // $user = Auth::user();
-        // $user->authorizeRoles('admin');
+        $user = Auth::user();
+        $user->authorizeRoles('user');
 
         $request->validate([
             'date' => 'required',
@@ -70,8 +73,9 @@ class BookingController extends Controller
     public function edit(Booking $booking)
     {
 
-        // $user = Auth::user();
-        // $user->authorizeRoles('admin');
+        $user = Auth::user();
+        $user->authorizeRoles('user');
+
         $barbers = Barber::all();
         $services = Services::all();
 
@@ -81,8 +85,8 @@ class BookingController extends Controller
     public function update(Request $request, Booking $booking)
     {
 
-        // $user = Auth::user();
-        // $user->authorizeRoles('admin');
+        $user = Auth::user();
+        $user->authorizeRoles('user');
 
         $formFields = $request->validate([
             'date' => 'required',
@@ -103,8 +107,8 @@ class BookingController extends Controller
 
     public function destroy(Booking $booking)
     {
-        // $user = Auth::user();
-        // $user->authorizeRoles('admin');
+        $user = Auth::user();
+        $user->authorizeRoles('user');
 
         $booking->delete();
 

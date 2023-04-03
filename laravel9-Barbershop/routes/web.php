@@ -3,9 +3,14 @@
 use App\Models\Services;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\user\ServiceController;
-use App\Http\Controllers\user\BookingController;
-use App\Http\Controllers\user\BarberController;
+use App\Http\Controllers\user\ServiceController as UserServiceController;
+use App\Http\Controllers\admin\ServiceController as AdminServiceController;
+
+use App\Http\Controllers\user\BookingController as UserBookingController;
+use App\Http\Controllers\admin\BookingController as AdminBookingController;
+
+use App\Http\Controllers\user\BarberController as UserBarberController;
+use App\Http\Controllers\admin\BarberController as AdminBarberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,8 +38,14 @@ Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->nam
 
 Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 
-Route::resource('user/services', ServiceController::class)->names('user.services');
+/* Admin routes */
+Route::resource('admin/bookings', AdminBookingController::class)->middleware(['auth'])->names('admin.bookings');
 
-Route::resource('user/bookings', BookingController::class)->names('user.bookings');
+Route::resource('admin/services', AdminServiceController::class)->middleware(['auth'])->names('admin.services');
 
-Route::resource('user/barbers', BarberController::class)->names('user.barbers');
+/* User Routes */
+Route::resource('user/services', UserServiceController::class)->names('user.services');
+
+Route::resource('user/bookings', UserBookingController::class)->names('user.bookings');
+
+Route::resource('user/barbers', UserBarberController::class)->names('user.barbers');

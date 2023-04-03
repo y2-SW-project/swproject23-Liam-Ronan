@@ -8,9 +8,15 @@
             </div>
         </div>
 
-        <button class="gradient btn fs-5 my-2 btn-lg mx-3">
-            <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('user.bookings.create')}}">Book Appointment</a>
-        </button>
+        @if(Auth::user()->hasRole('user'))
+            <button class="gradient btn fs-5 my-2 btn-lg mx-3">
+                <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('user.bookings.create')}}">Book Appointment</a>
+            </button>
+        @else
+            <button class="gradient btn fs-5 my-2 btn-lg mx-3">
+                <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('admin.bookings.create')}}">Book Appointment</a>
+            </button>
+        @endif
         <button class="btn btn-outline-light btn-lg fs-5 bg-transparent">
             <a class="text-light p-5 text-decoration-none fw-semibold" href="{{ route('contact')}}">Contact Us</a>
         </button>				

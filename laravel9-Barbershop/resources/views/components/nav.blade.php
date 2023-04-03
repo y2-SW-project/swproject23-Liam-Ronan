@@ -20,9 +20,15 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-light" href="{{ route('home') }}">Home</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-light" href="{{ route('user.bookings.index')}}">Bookings</a>
-                                </li>
+                                @if(Auth::user()->hasRole('user'))
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" href="{{ route('user.bookings.index')}}">Bookings</a>
+                                    </li>
+                                @else
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" href="{{ route('admin.bookings.index')}}">Bookings</a>
+                                    </li>
+                                @endif
                                 <li class="nav-item">
                                     <a class="nav-link text-light" href="{{ route('about') }}">About</a>
                                 </li>

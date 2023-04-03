@@ -35,9 +35,25 @@
                             <p>
                                 Total Cost of <strong class="fw-bolder fs-5 other-colour">&euro;{{$services->price}}.00</strong>
                             </p>    
-                            <button class="gradient btn my-2 btn-md">
-                              <a class="text-light text-decoration-none fw-semibold" href="{{ route('user.bookings.create')}}">Book Haircut</a>
-                          </button>                
+                    
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <button class="gradient btn my-2 btn-md">
+                                        <a class="text-light text-decoration-none fw-semibold" href="{{ route('admin.services.edit', $services)}}">Edit Service</a>
+                                    </button>   
+                                </div>
+                                <div class="col-md-4">
+                                    <form method="POST" action="{{route('admin.services.destroy', $services)}}">
+                                        {{-- Using csrf to prevent Cross-site request forgeries --}}
+                                        @csrf
+                                        {{-- Delete methods --}}
+                                        @method('DELETE')
+                                        <button class="gradient btn my-2 btn-md mx-3">
+                                            <a class="text-light text-decoration-none fw-semibold">Delete Service</a>
+                                        </button>   
+                                    </form>
+                                </div>
+                            </div>   
                         </div>
                         <hr class="border border-danger border-2 opacity-50 mt-4">
                     </div>
