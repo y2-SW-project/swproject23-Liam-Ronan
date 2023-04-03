@@ -22,72 +22,76 @@
 							<h3 class="heading display-5">
 								Edit <strong class="other-colour text-danger fw-bold"> Service</strong>
 							</h3>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <form method="POST" action="{{ route('admin.services.update', $services)}}" enctype="multipart/form-data" class="fs-5 para mt-5 rounded-5">
+                            
+                            <div class="container d-flex justify-content-center">
+                                <form method="POST" action="{{ route('admin.services.update', $services)}}" enctype="multipart/form-data" class="fs-5 para mt-1 rounded-5 w-50">
 
-                                        @csrf
-                                        @method('PUT')
-        
-                                        <div class="mt-4 mb-3 pt-1">
-                                            <label for="haircut" class="mb-2 para">Haircut</label>
-                                            <input type="text" class="form-control" name="haircut" value="{{$services->haircut}}"/>
-        
-                                            @error('haircut')
-                                                <p class="text-danger para mt-1">{{$message}}</p>
-                                            @enderror
-                                        </div>
-                                        <div class="mb-3 pt-3">
-                                            <label for="description" class="mb-2 para">Description</label>
-                                            <textarea type="text" class="form-control" name="description" rows="5">{{$services->description}}</textarea>
-        
-                                            @error('description')
-                                                <p class="text-danger para mt-1">{{$message}}</p>
-                                            @enderror
-                                            </div>
-                                        <div class="mb-3 pt-3">
-                                            <label for="price" class="mb-2 para">Price</label>
-                                            <div class="input-group mb-3">
-                                                <input type="text" class="form-control" name="price" value="{{$services->price}}"/>
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text">.00</span>
-                                                </div>
-                                            </div>
-                                                @error('price')
-                                                    <p class="para text-danger mt-1">{{$message}}</p>
-                                                @enderror
-                                            </select>
-                                        </div>
-                                        <div class="mb-3 pt-3">
-                                            <label for="duration" class="mb-2 para">Duration</label>
-                                            <input type="text" class="form-control" name="duration" value="{{$services->duration}}"/>
-                                                @error('duration')
-                                                    <p class="para text-danger mt-1">{{$message}}</p>
-                                                @enderror
-                                            </select>
-                                        </div>
+                                    @csrf
+                                    @method('PUT')
+
+                                    <div class="mt-4 mb-3 pt-1">
+                                        <label for="haircut" class="mb-2 para">Haircut</label>
+                                        <input type="text" class="form-control" name="haircut" value="{{$services->haircut}}"/>
+
+                                        @error('haircut')
+                                            <p class="text-danger para mt-1">{{$message}}</p>
+                                        @enderror
                                     </div>
-                                    <div class="col-md-6 d-flex justify-content-center mt-5">
-                                        <div class="mt-4 pt-5 px-5">
-                                            <img class="h-50 w-100 rounded-5" src="{{$services->image ? asset('storage/' . $services->image) : asset('/images/michael-demoya-Q82AM6BWBPM-unsplash.jpg')}}" alt="..."/>
-                                            <input type="file" class="form-control mt-3" name="image"/>
-        
-                                            @error('image')
+
+                                    <div class="mb-3 pt-3">
+                                        <label for="description" class="mb-2 para">Description</label>
+                                        <textarea type="text" class="form-control" name="description" rows="5">{{$services->description}}</textarea>
+
+                                        @error('description')
+                                            <p class="text-danger para mt-1">{{$message}}</p>
+                                        @enderror
+                                    </div>
+
+                                    <div class="mb-3 pt-3">
+                                        <label for="price" class="mb-2 para">Price</label>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text">&euro;</span>
+                                            <input type="text" class="form-control" name="price" value="{{$services->price}}"/>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">.00</span>
+                                            </div>
+                                        </div>
+                                            @error('price')
                                                 <p class="para text-danger mt-1">{{$message}}</p>
-                                            @enderror                              
-                                        </div>
+                                            @enderror
+                                        </select>
                                     </div>
-                                </div>
-                                    <button class="gradient btn mt-2 text-center">
+
+                                    <div class="mb-3 pt-3">
+                                        <label for="duration" class="mb-2 para">Duration</label>
+                                        <input type="text" class="form-control" name="duration" value="{{$services->duration}}"/>
+                                            @error('duration')
+                                                <p class="para text-danger mt-1">{{$message}}</p>
+                                            @enderror
+                                        </select>
+                                    </div>
+                            
+                                    <div class="pt-4">
+                                        <img class="h-50 w-100 rounded-5" src="{{$services->image ? asset('storage/' . $services->image) : asset('/images/michael-demoya-Q82AM6BWBPM-unsplash.jpg')}}" alt="..."/>
+                                        <input type="file" class="form-control mt-3" name="image"/>
+                                        
+
+                                        @error('image')
+                                            <p class="para text-danger mt-1">{{$message}}</p>
+                                        @enderror                              
+                                    </div>
+                                
+                                    <button class="gradient btn mt-5 text-center">
                                         <a class="text-light p-3 text-decoration-none fw-semibold">Update Service</a>
                                     </button>
-                                  </form>
+
+                                </form>
                             </div>
-						</div>
+                        </div>
 					</div>
 				</div>
 			</div>
-		</div>
+
 
             <x-info></x-info>
             <x-work></x-work>

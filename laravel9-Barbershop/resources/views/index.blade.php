@@ -102,7 +102,7 @@
 
                     @foreach ($services as $service)
                     <div class="col-md-6">
-                      <div class="card mb-3 p-3 text-light text-start bg-black" style="max-width: 540px;">
+                      <div class="card mb-3 p-3 text-light text-start bg-black" style="max-width: 600px;">
                         <div class="row g-0">
                           <x-service-card :service="$service"/>
                         </div>
@@ -119,9 +119,15 @@
                     </div>
                 </div>
             </div>
-            <button class="gradient btn fs-5 my-5 btn-lg">
-              <a class="text-light p-3 text-decoration-none fw-semibold" href={{ route('user.bookings.create')}}>Book Appointment</a>
-            </button>
+            @if(Auth::user()->hasRole('user'))
+              <button class="gradient btn fs-5 my-5 btn-lg">
+                <a class="text-light p-3 text-decoration-none fw-semibold" href={{ route('user.bookings.create')}}>Book Appointment</a>
+              </button>
+            @else
+              <button class="gradient btn fs-5 my-5 mx-3 btn-lg">
+                <a class="text-light p-3 text-decoration-none fw-semibold" href={{ route('admin.services.create')}}>Create Service</a>
+              </button>
+            @endif
         </div>
 
     <x-info></x-info>

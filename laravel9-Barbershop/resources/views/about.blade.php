@@ -61,8 +61,7 @@
             <div class="container-fluid bg-colour p-5">
               <div class="container text-center">
                 <img class="iconOne img-fluid pb-1" src="{{asset('/icons/icons8-imperial-mustache-64.png')}}" alt="">
-                <h3 class="heading display-4 text-center text-light">Meet the <strong class="other-colour text-danger fw-bold"> Team</strong></h3>
-                
+                <h3 class="heading display-4 text-center text-light mb-3">Meet the <strong class="other-colour text-danger fw-bold"> Team</strong></h3>
                 @unless(count($barbers) == 0)
 
                 @foreach ($barbers as $barber)

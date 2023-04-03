@@ -7,8 +7,10 @@
       </div>
       <p class="card-text para">{{Str::words($service->description, 20)}}</p>
     </div>
-    <div class="col-sm-12">
-      <hr class="border border-danger border-1 opacity-50">
+    <div class="row">
+      <div class="col-sm-12">
+        <hr class="border border-danger border-1 opacity-50">
+      </div>
     </div>
     <div class="col-md-6">
         @if (Auth::user()->hasRole('user'))

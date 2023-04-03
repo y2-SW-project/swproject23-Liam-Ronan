@@ -19,16 +19,19 @@
             <div class="container text-center">
               <img class="iconOne img-fluid pb-1" src="{{asset('/icons/icons8-imperial-mustache-64.png')}}" alt="">
              <h3 class="heading display-4 text-center text-light">Appointment <strong class="other-colour text-danger fw-bold"> Details</strong></h3>
-              <div class="row pt-5">
+              <div class="row pt-5  d-flex justify-content-center">
                 <div class="col-md-6">
-                  <img src="{{asset('/images/michael-demoya-Q82AM6BWBPM-unsplash.jpg')}}" class="img-fluid" style="max-height: 800px" alt="...">
-                </div>
-                <div class="col-md-6 text-light text-start d-flex align-items-center">
+                  <div class="container d-flex justify-content-center">
+                    <img src="{{$booking->services->image ? asset('storage/' . $booking->services->image) : asset('/images/antonio-reynoso-_25iXtaa6oY-unsplash.jpg')}}" class="img-fluid" style="max-height: 800px" alt="...">
+                  </div>
+                  </div>
+                <div class="col-md-6 text-light text-start">
                   <div class="col-md-12">
-                      <hr class="border border-danger border-2 opacity-50">
+                    <hr class="border border-danger border-2 opacity-50 p-0 m-0">
+               
                       <div class="para px-3">
                           <p>
-                            <h5 class="heading card-title">Appointment Date: <strong class="fw-bolder other-colour">{{ \Carbon\Carbon::parse($booking->date)->format('jS F')}}</strong></h5>
+                            <h5 class="heading card-title fs-3">Appointment Date: <strong class="fw-bolder other-colour">{{ \Carbon\Carbon::parse($booking->date)->format('jS F')}}</strong></h5>
                           </p>
                           <p>
                               Time: <strong class="fw-bolder fs-5 other-colour">{{\Carbon\Carbon::createFromFormat('H:i:s',$booking->time)->format('h:i')}}</strong>
@@ -65,7 +68,8 @@
                                 </div>  
                           </div>                        
                       </div>
-                      <hr class="border border-danger border-2 opacity-50">
+                
+                    <hr class="border border-danger border-2 opacity-50">
                   </div>
                 </div>
               </div>

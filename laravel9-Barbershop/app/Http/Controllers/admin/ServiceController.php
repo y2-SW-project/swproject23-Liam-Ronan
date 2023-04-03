@@ -49,7 +49,7 @@ class ServiceController extends Controller
         // dd($request);
 
         if ($request) {
-            return redirect()->route('index')->with('message', 'New Service created by Admin successfully!');
+            return redirect()->route('home')->with('message', 'New Service created by Admin successfully!');
         } 
         else {
             return redirect()->back()->withInput()->with('message', 'Unable to create Service at this time. Please try again later.');
