@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>About Us</title>
 		<link rel="stylesheet" href="resources/css/app.css" />
+    <script src="//unpkg.com/alpinejs" defer></script>
 		@vite(['resources/js/app.js'])
 	</head>
 	<body>
@@ -88,5 +89,6 @@
         </main>
         
         <x-footer></x-footer>
+        <x-flash-message/>
     </body>
 </html>
