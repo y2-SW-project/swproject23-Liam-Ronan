@@ -8,7 +8,7 @@
                 <p class="card-text para">Time: {{\Carbon\Carbon::createFromFormat('H:i:s',$booking->time)->format('h:i')}}</p>
                 <p class="para">Price: &euro;{{$booking->services->price}}.00
                 <p class="para">Barber: {{$booking->barber->name}}</p>
-                <p class="para text-muted">Duration: {{$booking->services->duration}}</p>
+                <p class="para">Duration: {{$booking->services->duration}}</p>
             <div class="col-sm-8">
                 <hr class="border border-danger border-1 opacity-50">
             </div>
@@ -16,11 +16,11 @@
         
         @if(Auth::user()->hasRole('user'))
             <button class="gradient btn btn-md my-4">
-                <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('user.bookings.show', $booking)}}">View Details</a>
+                <a class="text-light p-3 text-decoration-none fw-normal heading" href="{{ route('user.bookings.show', $booking)}}">View Details</a>
             </button>
         @else
             <button class="gradient btn btn-md my-4">
-                <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('admin.bookings.show', $booking)}}">View Details</a>
+                <a class="text-light p-3 text-decoration-none fw-normal heading" href="{{ route('admin.bookings.show', $booking)}}">View Details</a>
             </button>
         @endif
     

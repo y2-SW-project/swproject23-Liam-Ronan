@@ -31,10 +31,10 @@
                
                       <div class="para px-3">
                           <p>
-                            <h5 class="heading card-title fs-3">Appointment Date: <strong class="fw-bolder other-colour">{{ \Carbon\Carbon::parse($booking->date)->format('jS F')}}</strong></h5>
+                            <h5 class="heading card-title fs-3">Appointment Date: <strong class="fw-bolder text-danger">{{ \Carbon\Carbon::parse($booking->date)->format('jS F')}}</strong></h5>
                           </p>
                           <p>
-                              Time: <strong class="fw-bolder fs-5 other-colour">{{\Carbon\Carbon::createFromFormat('H:i:s',$booking->time)->format('h:i')}}</strong>
+                              Time: <strong class="fw-bolder fs-5 text-danger">{{\Carbon\Carbon::createFromFormat('H:i:s',$booking->time)->format('h:i')}}</strong>
                           </p>
                           <p>
                               Chosen Haircut: <a href="#" class="text-decoration-none text-light">{{$booking->services->haircut}}</a>
@@ -46,7 +46,7 @@
                             Barber: <a href="#" class="text-decoration-none text-light">{{$booking->barber->name}}</a>
                           </p>
                           <p>
-                              Total Cost of <strong class="fw-bolder fs-5 other-colour">&euro;{{$booking->services->price}}.00</strong>
+                              Total Cost of <strong class="fw-bolder fs-5 text-danger">&euro;{{$booking->services->price}}.00</strong>
                           </p>    
                           <p>Duration: <strong class="text-muted">{{$booking->services->duration}}</strong></p>
                           <div class="d-flex flex-row mb-3">

@@ -4,7 +4,8 @@
 
     <div class="bg-colour container-fluid text-center text-light fw-semi-bold pb-3 p-5">
         <img class="iconOne img-fluid pb-3" src="{{asset('/icons/razor.png')}}" alt="">
-        <h2 class="heading display-4">Welcome to our <strong class="other-colour text-danger fw-bold"> Barbershop</strong></h2>
+        <h2 class="heading display-4 fw-lighter">Welcome to our <strong class="other-colour text-danger heading
+          fw-bold"> Barbershop</strong></h2>
         <div class="row justify-content-center pb-3 pt-3">
             <div class="col-md-8">
                 <p class="para fs-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Neque morbi sed mauris facilisi pulvinar nisl elit. Lacus elementum fringilla et habitant tellus a massa</p>
@@ -12,7 +13,7 @@
         </div>
         <div class="container mb-5">
             <div class="row pt-3 justify-content-center">
-                <div class="col-md-12 hidden">
+                <div class="col-md-12">
                     <div class="row">
                         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                           <img
@@ -69,8 +70,9 @@
                 </div>
                 <div class="col-md-6 text-light px-5 pt-3">
                     <img class="" src="{{asset('icons/icons8-barber-67.png')}}" alt="">
-                    <h3 class="heading display-5 pt-3">
-                        This is our <strong class="other-colour text-danger fw-bold"> Story</strong>
+                    <h3 class="heading display-5 pt-3 fw-lighter">
+                        This is our <strong class="other-colour text-danger heading
+                        fw-bold"> Story</strong>
                     </h3>
                     <div class="para">
                         <p>
@@ -80,7 +82,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur.
                         </p>
                         <button class="gradient btn fs-5 my-2">
-                            <a class="text-light p-3 text-decoration-none fw-semibold" href={{ route('about')}}>Learn More</a>
+                            <a class="heading text-light p-3 text-decoration-none fw-normal" href={{ route('about')}}>Learn More</a>
                         </button>
                     </div>
                 </div>
@@ -91,7 +93,7 @@
     <div class="container-fluid bg-colour text-center">
         <div class="container text-center text-light p-5">
           <img class="iconOne img-fluid pb-3" src="{{asset('/icons/icons8-cut-67.png')}}" alt="">
-          <h2 class="heading display-4 pb-3">We Cut Hair, not <strong class="other-colour text-danger fw-bold"> Corners</strong></h2>
+          <h2 class="heading display-4 pb-3 fw-light">We Cut Hair, not <strong class="other-colour text-danger heading fw-bold"> Corners</strong></h2>
             <div class="row justify-content-center">
               <div class="col-md-10">
                   <p class="para fs-5 pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Neque morbi sed mauris facilisi pulvinar nisl elit. Lacus elementum fringilla et habitant tellus a massa</p>

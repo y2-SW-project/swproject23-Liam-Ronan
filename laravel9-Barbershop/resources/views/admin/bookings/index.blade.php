@@ -12,7 +12,7 @@
 	<body>
 		<x-nav></x-nav>
 				
-		<x-bookingBg></x-bookingBg>
+		@include('components.bgImageText', ['heading' => 'Your bookings', 'image' => 'hair-spies-TNhm6uVurpU-unsplash.jpg'])
 
         <main>
             

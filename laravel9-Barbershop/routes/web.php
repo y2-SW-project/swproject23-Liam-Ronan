@@ -46,8 +46,10 @@ Route::resource('admin/services', AdminServiceController::class)->middleware(['a
 Route::resource('admin/barbers', AdminBarberController::class)->middleware(['auth'])->names('admin.barbers');
 
 /* User Routes */
-Route::resource('user/services', UserServiceController::class)->names('user.services');
+Route::resource('user/services', UserServiceController::class)->middleware(['auth'])->names('user.services');
 
-Route::resource('user/bookings', UserBookingController::class)->names('user.bookings');
+Route::resource('user/bookings', UserBookingController::class)->middleware(['auth'])->names('user.bookings');
 
-Route::resource('user/barbers', UserBarberController::class)->names('user.barbers');
+Route::resource('user/barbers', UserBarberController::class)->middleware(['auth'])->names('user.barbers');
+
+Route::get('/services/{id}', [App\Http\Controllers\user\ServiceController::class, 'showService'])->name('user.services.show');

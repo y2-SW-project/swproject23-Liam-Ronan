@@ -25,10 +25,10 @@
                     </ul>
 
                     <div class="col-md-8 my-4">
-                        <a class="social"><img class="img-fluid mx-2" src="../../../social/FB.png" alt="Facebook"></a>
-                        <a class="social"><img class="img-fluid mx-2" src="../../../social/instagram.png" alt="instagram"></a>
-                        <a class="social"><img class="img-fluid mx-2" src="../../../social/linkedin.png" alt="LinkedIn"></a>
-                        <a class="social"><img class="img-fluid mx-2" src="../../../social/Twitter.png" alt="Twitter"></a>
+                        <a class="social"><img class="img-fluid mx-2" src="{{asset('social/FB.png')}}" alt="Facebook"></a>
+                        <a class="social"><img class="img-fluid mx-2" src="{{asset('social/instagram.png')}}" alt="instagram"></a>
+                        <a class="social"><img class="img-fluid mx-2" src="{{asset('social/linkedin.png')}}" alt="LinkedIn"></a>
+                        <a class="social"><img class="img-fluid mx-2" src="{{asset('social/Twitter.png')}}" alt="Twitter"></a>
                     </div>	
 
                 </div>

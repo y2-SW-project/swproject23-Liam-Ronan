@@ -28,41 +28,44 @@
                       <hr class="border border-danger border-2 opacity-50">
                       <div class="para px-3">
                           <p>
-                            <h5 class="heading card-title">Appointment Date: <strong class="fw-bolder other-colour">{{ \Carbon\Carbon::parse($booking->date)->format('jS F')}}</strong></h5>
+                            {{-- Formatting the date to be day and month with text --}}
+                            <h5 class="heading card-title">Appointment Date: <strong class="fw-bolder text-danger">{{
+                               \Carbon\Carbon::parse($booking->date)->format('jS F')}}</strong></h5>
+                          </p>
+                           {{-- Formatting the time to be hours and minutes --}}
+                          <p>
+                              Time: <strong class="fw-bolder fs-5 text-danger">{{\Carbon\Carbon::createFromFormat('H:i:s',$booking->time)->format('h:i')}}</strong>
                           </p>
                           <p>
-                              Time: <strong class="fw-bolder fs-5 other-colour">{{\Carbon\Carbon::createFromFormat('H:i:s',$booking->time)->format('h:i')}}</strong>
+                              <a href="{{ route('user.services.show', ['id' => $booking->services->id]) }}" class="slider-link text-decoration-none text-light">{{$booking->services->haircut}}</a>
                           </p>
                           <p>
-                              Chosen Haircut: <a href="#" class="text-decoration-none text-light">{{$booking->services->haircut}}</a>
-                          </p>
-                          <p>
-                              Haircut Description: <a href="#" class="text-decoration-none text-light">{{Str::words($booking->services->description, 20)}}</a>
+                              Haircut Description: <a href="{{ route('user.services.show', ['id' => $booking->services->id]) }}" class="text-decoration-none text-light">{{Str::words($booking->services->description, 20)}}</a>
                           </p>
                           <p>
                             Barber: <a href="#" class="text-decoration-none text-light">{{$booking->barber->name}}</a>
                           </p>
                           <p>
-                              Total Cost of <strong class="fw-bolder fs-5 other-colour">&euro;{{$booking->services->price}}.00</strong>
+                              Total Cost of <strong class="fw-bolder fs-5 text-danger">&euro;{{$booking->services->price}}.00</strong>
                           </p>    
-                          <p>Duration: <strong class="text-muted">{{$booking->services->duration}}</strong></p>
-                          <div class="row">
-                                <div class="col-md-4">
-                                    <button class="gradient btn my-1 btn-md">
-                                        <a class="text-light text-decoration-none fw-semibold" href="{{ route('user.bookings.edit', $booking)}}">Edit Appointment</a>
+                          <p>Duration: <strong class="text-danger">{{$booking->services->duration}}</strong></p>
+                          <div class="d-flex flex-row mb-3">
+                                
+                                <button class="gradient btn my-1 btn-md">
+                                    <a class="text-light text-decoration-none fw-semibold" href="{{ route('user.bookings.edit', $booking)}}">Edit Appointment</a>
                                 </button>
-                                </div>
-                                <div class="col-md-6">
-                                    <form method="POST" action="{{route('user.bookings.destroy', $booking)}}">
-                                        {{-- Using csrf to prevent Cross-site request forgeries --}}
-                                        @csrf
-                                        {{-- Delete methods --}}
-                                        @method('DELETE')
-                                        <button class="gradient btn my-1 btn-md">
-                                            <a class="text-light text-decoration-none fw-semibold">Cancel Appointment</a>
-                                        </button>      
-                                    </form>  
-                                </div>  
+                             
+                          
+                                <form method="POST" action="{{route('user.bookings.destroy', $booking)}}">
+                                    {{-- Using csrf to prevent Cross-site request forgeries --}}
+                                    @csrf
+                                    {{-- Delete methods --}}
+                                    @method('DELETE')
+                                    <button class="gradient btn my-1 btn-md mx-3">
+                                        <a class="text-light text-decoration-none fw-semibold">Cancel Appointment</a>
+                                    </button>      
+                                </form>  
+                               
                           </div>                        
                       </div>
                       <hr class="border border-danger border-2 opacity-50">
