@@ -43,6 +43,8 @@ Route::resource('admin/bookings', AdminBookingController::class)->middleware(['a
 
 Route::resource('admin/services', AdminServiceController::class)->middleware(['auth'])->names('admin.services');
 
+Route::resource('admin/barbers', AdminBarberController::class)->middleware(['auth'])->names('admin.barbers');
+
 /* User Routes */
 Route::resource('user/services', UserServiceController::class)->names('user.services');
 

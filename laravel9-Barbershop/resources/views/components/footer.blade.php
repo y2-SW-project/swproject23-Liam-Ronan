@@ -11,21 +11,26 @@
         <div class="container text-light">
             <div class="row py-3">
                 <div class="col-md-3">
-                    <ul class="list-group text-light text-decoration-underline">
+                    <ul class="list-group text-light text-decoration-none">
+
                         @if (Auth::user()->hasRole('user'))
-                            <a href="{{ route('user.bookings.index')}}" class="text-light heading"><li class="list-group-item bg-black text-light fs-5 border-0 px-0">Bookings</li></a>
+                            <a href="{{ route('user.bookings.index')}}" class="slider-link-other heading bg-black text-decoration-none list-group-item text-light fs-5 px-0">Bookings</a>
                         @else
-                            <a href="{{ route('admin.bookings.index')}}" class="text-light heading"><li class="list-group-item bg-black text-light fs-5 border-0 px-0">Bookings</li></a>
+                            <a href="{{ route('admin.bookings.index')}}" class="slider-link-other heading bg-black text-decoration-none list-group-item text-light fs-5 px-0">Bookings</a>
                         @endif
-                        <a href="{{ route('about') }}" class="text-light heading"><li class="list-group-item bg-black text-light fs-5 border-0 px-0">About</li></a>
-                        <a href="{{ route('contact') }}" class="text-light heading"><li class="list-group-item bg-black text-light fs-5 border-0 px-0">Contact</li></a>
+
+                        <a href="{{ route('about') }}" class="slider-link-other heading bg-black text-decoration-none list-group-item text-light fs-5 px-0">About</a>
+
+                        <a href="{{ route('contact') }}" class="slider-link-other heading bg-black text-decoration-none list-group-item text-light fs-5 px-0">Contact</a>
                     </ul>
+
                     <div class="col-md-8 my-4">
-                        <a class="social" href="#"><img class="img-fluid mx-2" src="../../social/FB.png" alt="Facebook"></a>
-                        <a class="social" href="#"><img class="img-fluid mx-2" src="../../social/instagram.png" alt="instagram"></a>
-                        <a class="social" href="#"><img class="img-fluid mx-2" src="../../social/linkedin.png" alt="LinkedIn"></a>
-                        <a class="social" href="#"><img class="img-fluid mx-2" src="../../social/Twitter.png" alt="Twitter"></a>
+                        <a class="social"><img class="img-fluid mx-2" src="../../../social/FB.png" alt="Facebook"></a>
+                        <a class="social"><img class="img-fluid mx-2" src="../../../social/instagram.png" alt="instagram"></a>
+                        <a class="social"><img class="img-fluid mx-2" src="../../../social/linkedin.png" alt="LinkedIn"></a>
+                        <a class="social"><img class="img-fluid mx-2" src="../../../social/Twitter.png" alt="Twitter"></a>
                     </div>	
+
                 </div>
                 <div class="col-md-3">
                     <h3 class="heading">Hours</h3>

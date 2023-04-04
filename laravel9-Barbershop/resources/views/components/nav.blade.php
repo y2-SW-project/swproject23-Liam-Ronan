@@ -18,22 +18,22 @@
                         <div class="container">
                             <ul class="heading navbar-nav fs-5 gap-4 justify-content-center">
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="{{ route('home') }}">Home</a>
+                                    <a class="slider-link nav-link text-light" href="{{ route('home') }}">Home</a>
                                 </li>
                                 @if(Auth::user()->hasRole('user'))
                                     <li class="nav-item">
-                                        <a class="nav-link text-light" href="{{ route('user.bookings.index')}}">Bookings</a>
+                                        <a class="slider-link nav-link text-light" href="{{ route('user.bookings.index')}}">Bookings</a>
                                     </li>
                                 @else
                                     <li class="nav-item">
-                                        <a class="nav-link text-light" href="{{ route('admin.bookings.index')}}">Bookings</a>
+                                        <a class="slider-link nav-link text-light" href="{{ route('admin.bookings.index')}}">Bookings</a>
                                     </li>
                                 @endif
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="{{ route('about') }}">About</a>
+                                    <a class="slider-link nav-link text-light" href="{{ route('about') }}">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="{{ route('contact') }}">Contact</a>
+                                    <a class="slider-link nav-link text-light" href="{{ route('contact') }}">Contact</a>
                                 </li>
                             </ul>
                         </div>

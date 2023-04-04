@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Boyz2Men | Update Service</title>
+		<title>Boyz2Men | Update {{$services->haircut}}</title>
 		<link rel="stylesheet" href="resources/css/app.css" />
 		@vite(['resources/js/app.js'])
 	</head>
@@ -24,7 +24,7 @@
 							</h3>
                             
                             <div class="container d-flex justify-content-center">
-                                <form method="POST" action="{{ route('admin.services.update', $services)}}" enctype="multipart/form-data" class="fs-5 para mt-1 rounded-5 w-50">
+                                <form method="POST" action="{{ route('admin.services.update', $services)}}" enctype="multipart/form-data" class="fs-5 para mt-1 rounded-5 w-75">
 
                                     @csrf
                                     @method('PUT')

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('bookings', function (Blueprint $table) {
             $table->unsignedBigInteger('barber_id');
-            $table->foreign('barber_id')->references('id')->on('barbers')->onUpdate('cascade')->onDelete('restrict');
+            $table->foreign('barber_id')->references('id')->on('barbers')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

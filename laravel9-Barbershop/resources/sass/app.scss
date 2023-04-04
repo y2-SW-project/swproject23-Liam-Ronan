@@ -14,7 +14,8 @@
 $secondary: #0E171B;
 $date-color: #2e2e2e;
 $highlight-colour: #cc5d57;
-$bg-colour: #242424;
+$bg-colour: #1b1b1b;
+$link:  #dc3545;
 
 //Custom fonts
 $font-heading: "Lora";
@@ -33,13 +34,63 @@ $linear: linear-gradient(160deg, $highlight-colour 0%, #000000 100%);
     background: $linear;
 }
 
+.slider-link {
+    color: $link;
+    position: relative;
+}
+
+.slider-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: $link;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 300ms ease-in;
+}
+
+.slider-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.slider-link:hover {
+    color: $link;
+}
+
+/* For the footer links */
+.slider-link-other {
+    position: relative;
+}
+
+.slider-link-other::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40%;
+    height: 2px;
+    background: $link;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 300ms ease-in;
+}
+
+.slider-link-other:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
 .bg-colour {
     background-color: $bg-colour;
 }
 
-.slider:hover::after {
-    transform: scaleX(1);
-}
 
 .heading {
     font-family: $font-heading;

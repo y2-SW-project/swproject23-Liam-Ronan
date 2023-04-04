@@ -43,7 +43,7 @@
                             </button>
                           </div>
                     </div>
-                    <div class="col-md-6 text-start text-light px-5 pt-5">
+                    <div class="col-md-6 text-start text-light px-5 pt-5 mt-5">
                       <img class="img-fluid pb-3" src="{{asset('icons/icons8-barber-67.png')}}" alt="">
                       <div class="para text-start">
                           <p>
@@ -60,17 +60,25 @@
 
             <div class="container-fluid bg-colour p-5">
               <div class="container text-center">
-                <img class="iconOne img-fluid pb-1" src="{{asset('/icons/icons8-imperial-mustache-64.png')}}" alt="">
-                <h3 class="heading display-4 text-center text-light mb-3">Meet the <strong class="other-colour text-danger fw-bold"> Team</strong></h3>
-                @unless(count($barbers) == 0)
+                  <img class="iconOne img-fluid pb-1" src="{{asset('/icons/icons8-imperial-mustache-64.png')}}" alt="">
+                  <h3 class="heading display-4 text-center text-light mb-3">Meet the <strong class="text-danger fw-bold"> Team</strong></h3>
+                  @unless(count($barbers) == 0)
 
-                @foreach ($barbers as $barber)
-                    <x-barber-card :barber="$barber"/>
-                @endforeach
+                  @foreach ($barbers as $barber)
+                      <x-barber-card :barber="$barber"/>
+                  @endforeach
 
-                @else
-                  <p class="para">No Barbers Found</p>
-                @endunless
+                  @else
+                    <p class="para">No Barbers Found</p>
+                  @endunless
+                
+                  @if(Auth::user()->hasRole('user'))
+
+                  @else
+                    <button class="gradient btn fs-5 my-3 mx-3 btn-lg">
+                      <a class="text-light p-3 text-decoration-none fw-semibold" href={{ route('admin.barbers.create')}}>Create a Barber</a>
+                    </button>
+                  @endif
               </div>
             </div>
 

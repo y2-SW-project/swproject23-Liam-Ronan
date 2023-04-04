@@ -49,23 +49,22 @@
                               Total Cost of <strong class="fw-bolder fs-5 other-colour">&euro;{{$booking->services->price}}.00</strong>
                           </p>    
                           <p>Duration: <strong class="text-muted">{{$booking->services->duration}}</strong></p>
-                          <div class="row">
-                                <div class="col-md-4">
-                                    <button class="gradient btn my-1 btn-md">
-                                        <a class="text-light text-decoration-none fw-semibold" href="{{ route('admin.bookings.edit', $booking)}}">Edit Appointment</a>
-                                    </button>
-                                </div>
-                                <div class="col-md-6">
-                                    <form method="POST" action="{{route('admin.bookings.destroy', $booking)}}">
-                                        {{-- Using csrf to prevent Cross-site request forgeries --}}
-                                        @csrf
-                                        {{-- Delete methods --}}
-                                        @method('DELETE')
-                                        <button class="gradient btn my-1 btn-md">
-                                            <a class="text-light text-decoration-none fw-semibold">Cancel Appointment</a>
-                                        </button>      
-                                    </form>  
-                                </div>  
+                          <div class="d-flex flex-row mb-3">
+                                
+                              <button class="gradient btn my-1 btn-md">
+                                  <a class="text-light text-decoration-none fw-semibold" href="{{ route('admin.bookings.edit', $booking)}}">Edit Appointment</a>
+                              </button>
+                          
+                              <form method="POST" action="{{route('admin.bookings.destroy', $booking)}}">
+                                  {{-- Using csrf to prevent Cross-site request forgeries --}}
+                                  @csrf
+                                  {{-- Delete methods --}}
+                                  @method('DELETE')
+                                  <button class="gradient btn my-1 btn-md mx-3">
+                                      <a class="text-light text-decoration-none fw-semibold">Delete Appointment</a>
+                                  </button>      
+                              </form>  
+                                
                           </div>                        
                       </div>
                 
