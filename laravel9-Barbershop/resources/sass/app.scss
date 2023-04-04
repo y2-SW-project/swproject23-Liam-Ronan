@@ -161,6 +161,23 @@ $linear: linear-gradient(160deg, $highlight-colour 0%, #000000 100%);
       }
 }
 
+.home-background-image {
+    height: 100vh; // Set the height to half the viewport height
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#424242; 
+    background-blend-mode: overlay;
+
+    h1 {
+        color: #ffffff;
+        text-align: center;
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); // Add a text shadow to improve readability
+      }
+}
+
 .bg-Text {
     color: $link;
 }

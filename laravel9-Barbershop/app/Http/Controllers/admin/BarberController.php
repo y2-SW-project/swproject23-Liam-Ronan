@@ -31,7 +31,7 @@ class BarberController extends Controller
      //Store the data passed in from the POST form
     public function store(Request $request)
     {
-
+        // dd($request);
         $user = Auth::user();
         $user->authorizeRoles('admin');
 
@@ -53,7 +53,7 @@ class BarberController extends Controller
 
         //if $request = true, return the admin with a message that is called in the index view
         if ($request) {
-            return redirect()->route('home')->with('message', 'New Barber created by Admin successfully!');
+            return redirect()->route('about')->with('message', 'New Barber created by Admin successfully!');
         } 
         //If the data can't be stored, return the last view with the message
         else {
@@ -91,7 +91,7 @@ class BarberController extends Controller
         $barber->update($formFields);
 
         if ($barber) {
-            return redirect()->route('home')->with('message', 'Barber Updated By Admin successfully');
+            return redirect()->route('about')->with('message', 'Barber Updated By Admin successfully');
         } 
         else {
             return redirect()->back()->withInput()->with('message', 'Unable to Update Barber at this time. Please try again later.');
@@ -107,7 +107,7 @@ class BarberController extends Controller
         $barber->delete();
 
         if ($barber) {
-            return redirect()->route('home')->with('message', 'Admin Barber has been deleted');
+            return redirect()->route('about')->with('message', 'Admin Barber has been deleted');
         } 
         else {
             return redirect()->back()->withInput()->with('message', 'Unable to delete Admin Barber at this time. Please try again later.');

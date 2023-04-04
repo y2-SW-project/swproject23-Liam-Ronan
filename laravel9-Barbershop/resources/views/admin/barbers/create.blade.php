@@ -35,7 +35,7 @@
                                         value="{{old('name')}}"/>
     
                                         {{-- Showing the error when the validation finds an inaccuracy --}}
-                                        @error('haircut')
+                                        @error('name')
                                             <p class="text-danger para mt-1">{{$message}}</p>
                                         @enderror
                                     </div>

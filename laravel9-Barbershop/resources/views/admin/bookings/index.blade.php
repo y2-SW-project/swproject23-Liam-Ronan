@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Bookings</title>
 		<link rel="stylesheet" href="resources/css/app.css" />
-        <script src="//unpkg.com/alpinejs" defer></script>
+        <script src="//unpkg.com/alpinejs"></script>
 		@vite(['resources/js/app.js'])
 	</head>
 	<body>
@@ -61,7 +61,5 @@
         </main>
         
         <x-footer></x-footer>
-        <x-flash-message></x-flash-message>
-
     </body>
 </html>

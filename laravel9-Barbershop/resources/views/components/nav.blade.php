@@ -40,10 +40,10 @@
                         {{-- Checking if the user is authorised to show a dropdown menu with a logout button --}}
                              @if(Auth::check())
                              <div class="slider-link nav-item dropdown text-light heading fs-5">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="nav-link dropdown-toggle fw-light" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {{-- Capitlising the first letter of the name and making it red using a callback function --}}
                                     Welcome, {!! preg_replace_callback('/(\w+)/', function($matches) {
-                                        return '<span class="bg-Text">'.ucfirst($matches[1]).'</span>';
+                                        return '<span class="bg-Text fw-normal">'.ucfirst($matches[1]).'</span>';
                                     }, Auth::user()->name) !!}
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">

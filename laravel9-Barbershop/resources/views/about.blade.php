@@ -76,7 +76,7 @@
 
                   @else
                     <button class="gradient btn fs-5 my-3 mx-3 btn-lg">
-                      <a class="text-light p-3 text-decoration-none fw-semibold" href={{ route('admin.barbers.create')}}>Create a Barber</a>
+                      <a class="heading text-light p-3 text-decoration-none fw-normal" href={{ route('admin.barbers.create')}}>Create a Barber</a>
                     </button>
                   @endif
               </div>
