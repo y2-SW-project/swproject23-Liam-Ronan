@@ -5,10 +5,10 @@
             <div class="col-sm-8">
               <hr class="border border-danger border-1 opacity-50">
             </div>
-                <p class="card-text para">Time: {{\Carbon\Carbon::createFromFormat('H:i:s',$booking->time)->format('h:i')}}</p>
-                <p class="para">Price: &euro;{{$booking->services->price}}.00
-                <p class="para">Barber: {{$booking->barber->name}}</p>
-                <p class="para">Duration: {{$booking->services->duration}}</p>
+                <p class="card-text heading">Time: {{\Carbon\Carbon::createFromFormat('H:i:s',$booking->time)->format('h:i')}}</p>
+                <p class="heading">Price: &euro;{{$booking->services->price}}.00
+                <p class="heading">Barber: {{$booking->barber->name}}</p>
+                <p class="heading">Duration: {{$booking->services->duration}}</p>
             <div class="col-sm-8">
                 <hr class="border border-danger border-1 opacity-50">
             </div>

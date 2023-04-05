@@ -11,7 +11,7 @@
 	<body>
 		<x-nav></x-nav>
 				
-		<x-bookingBg></x-bookingBg>
+		@include('components.bgImageText', ['heading' => 'Create Barber', 'image' => 'pexels-stephen-andrews-9388519-min.jpg'])
 
         <main>
 			<div class="container-fluid bg-colour p-5">
@@ -29,7 +29,7 @@
                                     @csrf
     
                                     <div class="mt-4 mb-3 pt-1">
-                                        <label for="name" class="mb-2 para">Name</label>
+                                        <label for="name" class="mb-2 heading">Name</label>
                                         <input type="text" class="form-control text-muted" name="name" placeholder="Barber Name"
                                         {{-- Keeping the form data when the form gets validated --}}
                                         value="{{old('name')}}"/>
@@ -41,7 +41,7 @@
                                     </div>
 
                                     <div class="mb-3 pt-3">
-                                        <label for="bio" class="mb-2 para">Bio</label>
+                                        <label for="bio" class="mb-2 heading">Bio</label>
                                         <textarea type="text" class="form-control text-muted" name="bio" rows="5" placeholder="Enter a Bio">{{old('bio')}}</textarea>
     
                                         @error('bio')
@@ -50,7 +50,7 @@
                                         </div>
 
                                         <div class="mb-3 pt-3">
-                                            <label for="email" class="mb-2 para">Email address</label>
+                                            <label for="email" class="mb-2 heading">Email address</label>
                                             <input type="email" class="form-control" name="email" placeholder="name@example.com" value="{{old('email')}}">
     
                                                 @error('email')
@@ -60,8 +60,8 @@
                                         </div>
 
                                         <div class="mb-3 pt-3">
-                                            <label for="phone_number" class="mb-2 para">Phone number</label>
-                                            <input type="text" class="form-control" name="phone_number" value="{{old('phone_number')}}"/>
+                                            <label for="phone_number" class="mb-2 heading">Phone number</label>
+                                            <input type="text" class="form-control" name="phone_number" placeholder="Phone number" value="{{old('phone_number')}}"/>
                                             
                                             @error('phone_number')
                                                 <p class="para text-danger mt-1">{{$message}}</p>
@@ -71,7 +71,7 @@
                                 
                         
                                         <div class="mb-3 pt-3">
-                                            <label for="image" class="mb-2 para">Barber Picture</label>
+                                            <label for="image" class="mb-2 heading">Barber Picture</label>
                                             <input type="file" class="form-control" name="image"/>
                                             @error('image')
                                                 <p class="para text-danger mt-1">{{$message}}</p>
@@ -79,7 +79,7 @@
                                         </div>
                                 
                                     <button class="gradient btn mt-5 text-center">
-                                        <a class="text-light p-3 text-decoration-none fw-semibold">Create Barber</a>
+                                        <a class="text-light p-3 text-decoration-none fw-normal heading">Create Barber</a>
                                     </button>
                                 </form>
                             </div>                        
@@ -90,7 +90,6 @@
 
 
             <x-info></x-info>
-            <x-work></x-work>
 
         </main>
         

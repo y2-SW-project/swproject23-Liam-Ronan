@@ -11,7 +11,7 @@
 	<body>
 		<x-nav></x-nav>
 				
-		<x-bookingBg></x-bookingBg>
+        @include('components.bgImageText', ['heading' => 'Barber Details', 'image' => 'andre-hunter-o48W6ydWSUA-unsplash.jpg'])
 
         <main>
 			<div class="container-fluid bg-colour p-5">
@@ -77,8 +77,8 @@
                                         @enderror                              
                                     </div>
                                 
-                                    <button class="gradient btn mt-5 text-center">
-                                        <a class="text-light p-3 text-decoration-none fw-semibold">Update Barber</a>
+                                    <button class="gradient btn mt-5 text-center fs-5">
+                                        <a class="heading text-light p-3 text-decoration-none fw-normal">Update Barber</a>
                                     </button>
 
                                 </form>

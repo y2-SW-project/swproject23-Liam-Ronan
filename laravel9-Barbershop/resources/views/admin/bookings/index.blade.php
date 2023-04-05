@@ -12,7 +12,7 @@
 	<body>
 		<x-nav></x-nav>
 				
-		@include('components.bgImageText', ['heading' => 'Your bookings', 'image' => 'hair-spies-TNhm6uVurpU-unsplash.jpg'])
+		@include('components.bgImageText', ['heading' => 'All bookings', 'image' => 'pexels-obsahovka-obsahovka-4449791-min.jpg'])
 
         <main>
             
@@ -47,7 +47,7 @@
                                     </button>
                                 @else
                                     <button class="gradient btn fs-5 my-2 btn-lg mx-3">
-                                        <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('admin.bookings.create')}}">Book Appointment</a>
+                                        <a class="text-light heading p-3 text-decoration-none fw-normal" href="{{ route('admin.bookings.create')}}">Book Appointment</a>
                                     </button>
                                 @endif
                             </div>
@@ -56,7 +56,7 @@
             </div>
 
             <x-info></x-info>
-            <x-work></x-work>
+            <x-enquire image="andre-hunter-o48W6ydWSUA-unsplash.jpg" heading="Interested in joining the Team?" buttonText="Enquire" buttonLink="{{ route('contact') }}" />
 
         </main>
         

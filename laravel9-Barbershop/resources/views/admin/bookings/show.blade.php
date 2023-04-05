@@ -11,7 +11,8 @@
 	<body>
 		<x-nav></x-nav>
 				
-		<x-bookingBg></x-bookingBg>
+    @include('components.bgImageText', ['heading' => 'View Appointment Details', 'image' => 'stefan-schauberger-Tper6bHeSUo-unsplash.jpg'])
+
 
         <main>
 
@@ -52,7 +53,7 @@
                           <div class="d-flex flex-row mb-3">
                                 
                               <button class="gradient btn my-1 btn-md">
-                                  <a class="text-light text-decoration-none fw-semibold" href="{{ route('admin.bookings.edit', $booking)}}">Edit Appointment</a>
+                                  <a class="text-light heading text-decoration-none fw-normal" href="{{ route('admin.bookings.edit', $booking)}}">Edit Appointment</a>
                               </button>
                           
                               <form method="POST" action="{{route('admin.bookings.destroy', $booking)}}">
@@ -61,7 +62,7 @@
                                   {{-- Delete methods --}}
                                   @method('DELETE')
                                   <button class="gradient btn my-1 btn-md mx-3">
-                                      <a class="text-light text-decoration-none fw-semibold">Delete Appointment</a>
+                                      <a class="heading text-light text-decoration-none fw-normal">Delete Appointment</a>
                                   </button>      
                               </form>  
                                 
@@ -76,7 +77,7 @@
           </div>
 
             <x-info></x-info>
-            <x-work></x-work>
+            <x-enquire image="andre-hunter-o48W6ydWSUA-unsplash.jpg" heading="Interested in joining the Team?" buttonText="Enquire" buttonLink="{{ route('contact') }}" />
 
         </main>
         

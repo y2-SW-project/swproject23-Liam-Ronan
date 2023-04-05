@@ -11,7 +11,7 @@
 	<body>
 		<x-nav></x-nav>
 				
-		<x-bookingBg></x-bookingBg>
+        @include('components.bgImageText', ['heading' => 'Edit Service', 'image' => 'pexels-kevin-bidwell-9971239-min.jpg'])
 
         <main>
 			<div class="container-fluid bg-colour p-5">
@@ -24,65 +24,65 @@
 							</h3>
                             
                             <div class="container d-flex justify-content-center">
-                                <form method="POST" action="{{ route('admin.services.update', $services)}}" enctype="multipart/form-data" class="fs-5 para mt-1 rounded-5 w-75">
+                                <form method="POST" action="{{ route('admin.services.update', $services)}}" enctype="multipart/form-data" class="fs-5 heading mt-1 rounded-5 w-75">
 
                                     @csrf
                                     @method('PUT')
 
                                     <div class="mt-4 mb-3 pt-1">
-                                        <label for="haircut" class="mb-2 para">Haircut</label>
-                                        <input type="text" class="form-control" name="haircut" value="{{$services->haircut}}"/>
+                                        <label for="haircut" class="mb-2 ">Haircut</label>
+                                        <input type="text" class="para form-control" name="haircut" value="{{$services->haircut}}"/>
 
                                         @error('haircut')
-                                            <p class="text-danger para mt-1">{{$message}}</p>
+                                            <p class="text-danger  mt-1">{{$message}}</p>
                                         @enderror
                                     </div>
 
                                     <div class="mb-3 pt-3">
-                                        <label for="description" class="mb-2 para">Description</label>
-                                        <textarea type="text" class="form-control" name="description" rows="5">{{$services->description}}</textarea>
+                                        <label for="description" class="mb-2 ">Description</label>
+                                        <textarea type="text" class="para form-control" name="description" rows="5">{{$services->description}}</textarea>
 
                                         @error('description')
-                                            <p class="text-danger para mt-1">{{$message}}</p>
+                                            <p class="text-danger  mt-1">{{$message}}</p>
                                         @enderror
                                     </div>
 
                                     <div class="mb-3 pt-3">
-                                        <label for="price" class="mb-2 para">Price</label>
+                                        <label for="price" class="mb-2 ">Price</label>
                                         <div class="input-group mb-3">
                                             <span class="input-group-text">&euro;</span>
-                                            <input type="text" class="form-control" name="price" value="{{$services->price}}"/>
+                                            <input type="text" class="form-control para" name="price" value="{{$services->price}}"/>
                                             <div class="input-group-append">
                                                 <span class="input-group-text">.00</span>
                                             </div>
                                         </div>
                                             @error('price')
-                                                <p class="para text-danger mt-1">{{$message}}</p>
+                                                <p class=" text-danger mt-1">{{$message}}</p>
                                             @enderror
                                         </select>
                                     </div>
 
                                     <div class="mb-3 pt-3">
-                                        <label for="duration" class="mb-2 para">Duration</label>
-                                        <input type="text" class="form-control" name="duration" value="{{$services->duration}}"/>
+                                        <label for="duration" class="mb-2 ">Duration</label>
+                                        <input type="text" class="para form-control" name="duration" value="{{$services->duration}}"/>
                                             @error('duration')
-                                                <p class="para text-danger mt-1">{{$message}}</p>
+                                                <p class=" text-danger mt-1">{{$message}}</p>
                                             @enderror
                                         </select>
                                     </div>
                             
                                     <div class="pt-4">
                                         <img class="h-50 w-100 rounded-5" src="{{$services->image ? asset('storage/' . $services->image) : asset('/images/michael-demoya-Q82AM6BWBPM-unsplash.jpg')}}" alt="..."/>
-                                        <input type="file" class="form-control mt-3" name="image"/>
+                                        <input type="file" class="para form-control mt-3" name="image"/>
                                         
 
                                         @error('image')
-                                            <p class="para text-danger mt-1">{{$message}}</p>
+                                            <p class=" text-danger mt-1">{{$message}}</p>
                                         @enderror                              
                                     </div>
                                 
                                     <button class="gradient btn mt-5 text-center">
-                                        <a class="text-light p-3 text-decoration-none fw-semibold">Update Service</a>
+                                        <a class="heading text-light p-3 text-decoration-none fw-normal">Update Service</a>
                                     </button>
 
                                 </form>
@@ -94,7 +94,6 @@
 
 
             <x-info></x-info>
-            <x-work></x-work>
 
         </main>
         

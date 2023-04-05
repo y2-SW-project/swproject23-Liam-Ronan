@@ -5,7 +5,7 @@
     <div class="bg-colour container-fluid text-center text-light fw-semi-bold pb-3 p-5">
         <img class="iconOne img-fluid pb-3" src="{{asset('/icons/razor.png')}}" alt="">
         <h2 class="heading display-4 fw-lighter">Welcome to our <strong class="other-colour text-danger heading
-          fw-bold"> Barbershop</strong></h2>
+          fw-bold slider-link"> Barbershop</strong></h2>
         <div class="row justify-content-center pb-3 pt-3">
             <div class="col-md-8">
                 <p class="para fs-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Neque morbi sed mauris facilisi pulvinar nisl elit. Lacus elementum fringilla et habitant tellus a massa</p>
@@ -24,7 +24,7 @@
                     <img class="" src="{{asset('icons/icons8-barber-67.png')}}" alt="">
                     <h3 class="heading display-5 pt-3 fw-lighter">
                         This is our <strong class="other-colour text-danger heading
-                        fw-bold"> Story</strong>
+                        fw-bold slider-link"> Story</strong>
                     </h3>
                     <div class="para">
                         <p>
@@ -45,7 +45,7 @@
     <div class="container-fluid bg-colour text-center">
         <div class="container text-center text-light p-5">
           <img class="iconOne img-fluid pb-3" src="{{asset('/icons/icons8-cut-67.png')}}" alt="">
-          <h2 class="heading display-4 pb-3 fw-light">We Cut Hair, not <strong class="other-colour text-danger heading fw-bold"> Corners</strong></h2>
+          <h2 class="heading display-4 pb-3 fw-light">We Cut Hair, not <strong class="other-colour text-danger heading fw-bold slider-link"> Corners</strong></h2>
             <div class="row justify-content-center">
               <div class="col-md-10">
                   <p class="para fs-5 pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Neque morbi sed mauris facilisi pulvinar nisl elit. Lacus elementum fringilla et habitant tellus a massa</p>
@@ -75,7 +75,7 @@
             </div>
             @if(Auth::user()->hasRole('user'))
               <button class="gradient btn fs-5 my-5 btn-lg">
-                <a class="text-light p-3 text-decoration-none fw-semibold" href={{ route('user.bookings.create')}}>Book Appointment</a>
+                <a class="text-light heading p-3 text-decoration-none fw-normal" href={{ route('user.bookings.create')}}>Book Appointment</a>
               </button>
             @else
               <button class="gradient btn fs-5 my-5 mx-3 btn-lg">
@@ -85,7 +85,7 @@
         </div>
 
     <x-info></x-info>
-
-    <x-work></x-work>
+    <x-enquire image="andre-hunter-o48W6ydWSUA-unsplash.jpg" heading="Interested in joining the Team?" buttonText="Enquire" buttonLink="{{ route('contact') }}" />
+    {{-- <x-work></x-work> --}}
 
 @endsection

@@ -11,7 +11,7 @@
 	<body>
 		<x-nav></x-nav>
 				
-		<x-otherBg></x-otherBg>
+        @include('components.bgImageText', ['heading' => 'Our Service', 'image' => 'pexels-lisa-fotios-1895701.jpg'])
 
         <main>
             <div class="container-fluid bg-colour p-5">
@@ -38,7 +38,7 @@
                     
                             <div class="d-flex flex-row mb-3">
                                 <button class="gradient btn my-2 btn-md">
-                                    <a class="text-light text-decoration-none fw-semibold" href="{{ route('admin.services.edit', $services)}}">Edit Service</a>
+                                    <a class="text-light text-decoration-none heading fw-normal" href="{{ route('admin.services.edit', $services)}}">Edit Service</a>
                                 </button>   
                             
                             
@@ -48,7 +48,7 @@
                                     {{-- Delete methods --}}
                                     @method('DELETE')
                                     <button class="gradient btn my-2 btn-md mx-3">
-                                        <a class="text-light text-decoration-none fw-semibold">Delete Service</a>
+                                        <a class="text-light text-decoration-none heading fw-normal">Delete Service</a>
                                     </button>   
                                 </form>
                             </div>

@@ -11,7 +11,7 @@
 	<body>
 		<x-nav></x-nav>
 				
-		<x-bookingBg></x-bookingBg>
+		@include('components.bgImageText', ['heading' => 'Create A booking', 'image' => 'hai-phung-m4Pd_e-4zKs-unsplash.jpg'])
 
         <main>
 
@@ -83,7 +83,7 @@
 		</div>
 
             <x-info></x-info>
-            <x-work></x-work>
+			<x-enquire image="andre-hunter-o48W6ydWSUA-unsplash.jpg" heading="Interested in joining the Team?" buttonText="Enquire" buttonLink="{{ route('contact') }}" />
 
         </main>
         

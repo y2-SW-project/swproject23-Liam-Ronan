@@ -84,7 +84,7 @@
             </div>
 
             <x-info></x-info>
-            <x-work></x-work>
+            <x-enquire image="andre-hunter-o48W6ydWSUA-unsplash.jpg" heading="Interested in joining the Team?" buttonText="Enquire" buttonLink="{{ route('contact') }}" />
 
         </main>
         

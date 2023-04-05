@@ -11,7 +11,7 @@
 	<body>
 		<x-nav></x-nav>
 				
-		<x-otherBg></x-otherBg>
+    @include('components.bgImageText', ['heading' => 'View This Haircut', 'image' => 'pexels-nikolaos-dimou-1319461-min.jpg'])
 
         <main>
             <div class="container-fluid bg-colour p-5">
@@ -36,7 +36,7 @@
                                 Total Cost of <strong class="fw-bolder fs-5 other-colour">&euro;{{$services->price}}.00</strong>
                             </p>    
                             <button class="gradient btn my-2 btn-md">
-                              <a class="text-light text-decoration-none fw-semibold" href="{{ route('user.bookings.create')}}">Book Haircut</a>
+                              <a class="text-light heading text-decoration-none fw-normal" href="{{ route('user.bookings.create')}}">Book Haircut</a>
                           </button>                
                         </div>
                         <hr class="border border-danger border-2 opacity-50 mt-4">
@@ -47,7 +47,7 @@
             </div>
 
             <x-info></x-info>
-            <x-work></x-work>
+            <x-enquire image="andre-hunter-o48W6ydWSUA-unsplash.jpg" heading="Interested in joining the Team?" buttonText="Enquire" buttonLink="{{ route('contact') }}" />
 
         </main>
         

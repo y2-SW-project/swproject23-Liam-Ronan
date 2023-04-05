@@ -12,7 +12,7 @@
 	<body>
 		<x-nav></x-nav>
 				
-		<x-bookingBg></x-bookingBg>
+		@include('components.bgImageText', ['heading' => 'View your Appointments', 'image' => 'pexels-maria-orlova-4969838-min.jpg'])
 
         <main>
             
@@ -42,7 +42,7 @@
                             
                             <div class="text-center">
                                 <button class="gradient btn fs-5 my-2">
-                                    <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('user.bookings.create')}}">Book Appointment</a>
+                                    <a class="text-light heading p-3 text-decoration-none fw-normal" href="{{ route('user.bookings.create')}}">Book Appointment</a>
                                 </button>	
                             </div>
                     </div>
@@ -50,7 +50,7 @@
             </div>
 
             <x-info></x-info>
-            <x-work></x-work>
+            <x-enquire image="andre-hunter-o48W6ydWSUA-unsplash.jpg" heading="Interested in joining the Team?" buttonText="Enquire" buttonLink="{{ route('contact') }}" />
 
         </main>
         

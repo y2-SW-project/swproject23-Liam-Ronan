@@ -8,16 +8,16 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
         @vite(['resources/js/app.js'])
     
     </head>
 <body>
-    <div class="bg-login pt-3">
+    <div class="bg-register pt-3">
         <div id="app">
             <nav class="navbar navbar-expand-md navbar-light shadow-sm text-light">
                 <div class="container">
-                    <a class="slider-link heading navbar-brand text-light">
+                    <a class="slider-link heading fs-5 navbar-brand text-light">
                         {{ config('app.name', 'Boyz2Men') }}
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -31,7 +31,7 @@
                         </ul>
 
                         <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ms-auto">
+                        <ul class="navbar-nav fs-5 ms-auto">
                             <!-- Authentication Links -->
                             @guest
                                 @if (Route::has('login'))
@@ -82,8 +82,8 @@
                                             <hr class="border border-danger border-2 opacity-75">
 
                                             <label for="name" class="fs-5 col-md-6 col-form-label p-2">{{ __('Name') }}</label>
-                                            <div class="mb-3">
-                                                <input id="name" placeholder="Enter Name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                            <div class="mb-3 glass">
+                                                <input id="name" placeholder="Enter Name" type="text" class="form-control bg-transparent text-light @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
         
                                                 @error('name')
                                                     <span class="invalid-feedback" role="alert">
@@ -93,8 +93,8 @@
                                             </div>
 
                                             <label for="email" class="fs-5 col-md-8 col-form-label p-2">{{ __('Email Address') }}</label>
-                                            <div class="mb-3">
-                                                <input id="email" placeholder="Enter Email Address" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                            <div class="mb-3 glass">
+                                                <input id="email" placeholder="Enter Email Address" type="email" class="form-control bg-transparent text-light @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                                 @error('email')
                                                 <span class="invalid-feedback" role="alert">
@@ -104,8 +104,8 @@
                                             </div>
 
                                             <label for="password" class="fs-5 col-md-6 col-form-label p-2">{{ __('Password') }}</label>
-                                            <div class="mb-3">
-                                                <input id="password" placeholder="Enter Password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                            <div class="mb-3 glass">
+                                                <input id="password" placeholder="Enter Password" type="password" class="form-control bg-transparent text-light @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                                 @error('password')
                                                     <span class="invalid-feedback" role="alert">
@@ -115,8 +115,8 @@
                                             </div>
 
                                             <label for="password-confirm" class="fs-5 col-md-6 col-form-label p-2">{{ __('Confirm Password') }}</label>
-                                            <div class="mb-3">
-                                                <input id="password-confirm" placeholder="Confirm Password" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                            <div class="mb-3 glass">
+                                                <input id="password-confirm" placeholder="Confirm Password" type="password" class="form-control bg-transparent text-light" name="password_confirmation" required autocomplete="new-password">
                                             </div>
 
                                             <hr class="border border-danger border-2 opacity-75 mt-5">
@@ -126,15 +126,24 @@
                                 </div>
                         </div>
 
+                        <div class="row d-flex justify-content-center">
                             <button class="col-md-4 rounded-3 my-2 gradient btn text-light">
                                 {{ __('Register') }}
                             </button>
 
-                            @if (Route::has('password.request'))
-                                <a class="slider-link btn para my-3 px-3 text-light" href="{{ route('password.request') }}">
+                            <div class="container">
+                                @if (Route::has('password.request'))
+                                <a class="slider-link btn para my-1 text-light" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
-                            @endif   
+                                @endif   
+                            </div>
+                            
+                            <div class="container">
+                                <a class="slider-link btn para my-1 text-light" href="{{ route('login') }}">{{ __("Already have an account? Login here") }}</a>
+                            </div>
+                        </div>
+
                         </form>
             </div>
         </div>

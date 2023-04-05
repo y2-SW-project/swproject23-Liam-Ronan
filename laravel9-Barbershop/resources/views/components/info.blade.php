@@ -1,6 +1,6 @@
 <div class="container-fluid bg-black p-5">
     <div class="container text-center text-light p-5">
-            <h2 class="heading display-4 pb-3">Get in touch with <strong class="other-colour text-danger fw-bold"> Us</strong></h2>
+            <h2 class="heading display-4 pb-3 fw-light">Get in touch with <strong class="other-colour text-danger fw-bold slider-link"> Us</strong></h2>
             <div class="para fs-5">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Neque morbi sed mauris facilisi pulvinar nisl elit. Lacus elementum fringilla et habitant tellus a massa 

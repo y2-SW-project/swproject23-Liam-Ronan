@@ -46,8 +46,8 @@
                                         return '<span class="bg-Text fw-normal">'.ucfirst($matches[1]).'</span>';
                                     }, Auth::user()->name) !!}
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-end">
-                                    <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                                <div class="dropdown-menu dropdown-menu-end bg-black">
+                                    <a href="{{ route('logout') }}" class="bg-black dropdown-item text-light" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>

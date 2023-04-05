@@ -26,7 +26,7 @@ use App\Http\Controllers\admin\BarberController as AdminBarberController;
 /* Route::get('/', function () {
     return view('welcome');
 }); */
-Auth::routes();
+
 
 Route::get('/', function () {
     return view('auth\login');
@@ -53,3 +53,7 @@ Route::resource('user/bookings', UserBookingController::class)->middleware(['aut
 Route::resource('user/barbers', UserBarberController::class)->middleware(['auth'])->names('user.barbers');
 
 Route::get('/services/{id}', [App\Http\Controllers\user\ServiceController::class, 'showService'])->name('user.services.show');
+
+Route::get('/barbers/{id}', [App\Http\Controllers\user\BarberController::class, 'showBarber'])->name('user.barbers.show');
+
+Auth::routes();

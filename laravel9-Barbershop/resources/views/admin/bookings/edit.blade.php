@@ -11,7 +11,7 @@
 	<body>
 		<x-nav></x-nav>
 				
-		<x-bookingBg></x-bookingBg>
+		@include('components.bgImageText', ['heading' => 'Edit Appointment Details', 'image' => 'pexels-thgusstavo-santana-2521978-min.jpg'])
 
         <main>
 
@@ -23,7 +23,7 @@
 							<h3 class="heading display-5">
 								Edit Your <strong class="other-colour text-danger fw-bold"> Appointment</strong>
 							</h3>
-							<form method="POST" action="{{ route('admin.bookings.update', $booking)}}" enctype="multipart/form-data" class="fs-5 para mt-5">
+							<form method="POST" action="{{ route('admin.bookings.update', $booking)}}" enctype="multipart/form-data" class="fs-5 heading mt-5">
 
                                 @csrf
                                 @method('PUT')
@@ -78,7 +78,7 @@
 									</select>
 								</div>
 								<button class="gradient btn fs-5 mt-4">
-									<a class="text-light p-3 text-decoration-none fw-semibold">Update Appointment</a>
+									<a class="text-light p-3 text-decoration-none fw-normal">Update Appointment</a>
 								</button>
 							  </form>
 						</div>
@@ -88,7 +88,7 @@
 		</div>
 
             <x-info></x-info>
-            <x-work></x-work>
+			<x-enquire image="andre-hunter-o48W6ydWSUA-unsplash.jpg" heading="Interested in joining the Team?" buttonText="Enquire" buttonLink="{{ route('contact') }}" />
 
         </main>
         

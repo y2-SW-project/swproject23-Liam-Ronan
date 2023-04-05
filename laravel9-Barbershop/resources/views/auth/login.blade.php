@@ -8,7 +8,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
         @vite(['resources/js/app.js'])
     
     </head>
@@ -17,7 +17,7 @@
         <div id="app">
             <nav class="navbar navbar-expand-md navbar-light shadow-sm text-light">
                 <div class="container">
-                    <a class="slider-link heading navbar-brand text-light">
+                    <a class="slider-link heading fs-5 text-decoration-none text-light">
                         {{ config('app.name', 'Boyz2Men') }}
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -31,7 +31,7 @@
                         </ul>
 
                         <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ms-auto">
+                        <ul class="navbar-nav fs-5 ms-auto">
                             <!-- Authentication Links -->
                             @guest
                                 @if (Route::has('login'))
@@ -73,36 +73,51 @@
             <div class="heading align-self-center text-center text-light col-md-8">
                         <h1 class="heading text-danger display-5 fw-normal mb-1">Log In<h1>
                         <div class="container heading">
-                            <form method="POST" action="{{ route('login') }}">
+                        <form method="POST" action="{{ route('login') }}">
+
                                 @csrf
+
                                 <div class="container my-3">
                                     <div class="row justify-content-center">
                                         <div class="col-md-8 text-center">
+
                                             <hr class="border border-danger border-2 opacity-75">
+
                                             <label for="email" class="fs-5 col-md-8 col-form-label p-2">{{ __('Email Address') }}</label>
-                                            <div class="mb-3">
-                                                <input id="email" placeholder="Enter Email Address" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+                                            <div class="mb-3 glass">
+                                                <input id="email" placeholder="Enter Email Address" type="email" class="form-control bg-transparent text-light @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                             </div>
 
                                             <label for="password" class="fs-5 col-md-6 col-form-label p-2">{{ __('Password') }}</label>
-                                            <div class="mb-3">
-                                                <input id="password" placeholder="Enter Password"  type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                            <div class="mb-3 glass">
+                                                <input id="password" placeholder="Enter Password"  type="password" class="form-control bg-transparent text-light @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                             </div>
+
                                             <hr class="border border-danger border-2 opacity-75 mt-5">
                                         </div>
                                     </div>
                                 </div>
-                        </div>
 
-                            <button class="col-md-4 rounded-3 my-2 gradient btn text-light">
-                                {{ __('Login') }}
-                            </button>
+                            <div class="row d-flex justify-content-center">
+                                <button class="col-md-4 rounded-3 my-2 gradient btn text-light">
+                                    {{ __('Login') }}
+                                </button>
 
-                            @if (Route::has('password.request'))
-                                <a class="slider-link btn para my-3 px-3 text-light" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                            @endif   
+                                <div class="container">
+                                    @if (Route::has('password.request'))
+                                    <a class="slider-link btn para my-1 text-light" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                    @endif   
+                                </div>
+
+                                <div class="container">
+                                    <a class="slider-link btn para my-1 text-light" href="{{ route('register') }}">{{ __("Don't have an account? Make one here") }}</a>
+                                </div>
+
+                            </div>
                         </form>
             </div>
         </div>

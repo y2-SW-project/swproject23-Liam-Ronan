@@ -11,7 +11,7 @@
 	<body>
 		<x-nav></x-nav>
 				
-		<x-bookingBg></x-bookingBg>
+		@include('components.bgImageText', ['heading' => 'Make A booking', 'image' => 'hair-spies-TNhm6uVurpU-unsplash.jpg'])
 
         <main>
 
@@ -23,7 +23,7 @@
 							<h3 class="heading display-5">
 								Book an <strong class="other-colour text-danger fw-bold"> Appointment</strong>
 							</h3>
-							<form method="POST" action="{{ route('user.bookings.store')}}" enctype="multipart/form-data" class="fs-5 para mt-5">
+							<form method="POST" action="{{ route('user.bookings.store')}}" enctype="multipart/form-data" class="fs-5 heading mt-5">
 								@csrf
 								<div class="mt-4 mb-2 pt-1">
 									<label for="date" class="form-label">Date</label>
@@ -73,7 +73,7 @@
 									</select>
 								</div>
 								<button class="gradient btn fs-5 my-3">
-									<a class="text-light p-3 text-decoration-none fw-semibold">Book Appointment</a>
+									<a class="heading text-light p-3 text-decoration-none fw-normal">Book Appointment</a>
 								</button>
 							  </form>
 						</div>
@@ -83,7 +83,7 @@
 		</div>
 
             <x-info></x-info>
-            <x-work></x-work>
+			<x-enquire image="andre-hunter-o48W6ydWSUA-unsplash.jpg" heading="Interested in joining the Team?" buttonText="Enquire" buttonLink="{{ route('contact') }}" />
 
         </main>
         

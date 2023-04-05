@@ -11,7 +11,7 @@
 	<body>
 		<x-nav></x-nav>
 				
-		<x-bookingBg></x-bookingBg>
+        @include('components.bgImageText', ['heading' => 'Create Service', 'image' => 'pexels-vitaly-gorbachev-10775073-min.jpg'])
 
         <main>
 			<div class="container-fluid bg-colour p-5">
@@ -80,7 +80,7 @@
                                     </div>
                                 
                                     <button class="gradient btn mt-5 text-center">
-                                        <a class="text-light p-3 text-decoration-none fw-semibold">Create Service</a>
+                                        <a class="heading text-light p-3 text-decoration-none fw-normal">Create Service</a>
                                     </button>
                                 </form>
                             </div>                        
@@ -91,7 +91,6 @@
 
 
             <x-info></x-info>
-            <x-work></x-work>
 
         </main>
         
