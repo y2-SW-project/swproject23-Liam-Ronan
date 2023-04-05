@@ -11,55 +11,7 @@
                 <p class="para fs-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Neque morbi sed mauris facilisi pulvinar nisl elit. Lacus elementum fringilla et habitant tellus a massa</p>
             </div>
         </div>
-        <div class="container mb-5">
-            <div class="row pt-3 justify-content-center">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                          <img
-                            src="{{asset('/images/arthur-humeau-Twd3yaqA2NM-unsplash.jpg')}}"
-                            class="w-100 shadow-1-strong rounded mb-4"
-                            alt="Boat on Calm Water"
-                          />
-                      
-                          <img
-                            src="{{asset('/images/jose-pinto-yG0Z9OwXWks-unsplash.jpg')}}"
-                            class="w-100 shadow-1-strong rounded mb-4"
-                            alt="Wintry Mountain Landscape"
-                          />
-                        </div>
-                      
-                        <div class="col-lg-4 mb-4 mb-lg-0">
-                          <img
-                            src="{{asset('images/agustin-fernandez-1Pmp9uxK8X8-unsplash-min.jpg')}}"
-                            class="w-100 shadow-1-strong rounded mb-4"
-                            alt="Mountains in the Clouds"
-                          />
-                      
-                          <img
-                            src="{{asset('images/allef-vinicius-IvQeAVeJULw-unsplash.jpg')}}"
-                            class="w-100 shadow-1-strong rounded mb-4"
-                            alt="Boat on Calm Water"
-                          />
-                        </div>
-                      
-                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                          <img
-                            src="{{asset('images/andre-hunter-QjwghSDCy_s-unsplash.jpg')}}"
-                            class="w-100 shadow-1-strong rounded mb-4"
-                            alt="Waves at Sea"
-                          />
-                      
-                          <img
-                            src="{{asset('images/pexels-maria-orlova-4969842.jpg')}}"
-                            class="w-100 shadow-1-strong rounded mb-4"
-                            alt="Yosemite National Park"
-                          />
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
+        <x-image-grid></x-image-grid>
     </div>
 
     <div class="container-fluid bg-black p-5">
@@ -127,7 +79,7 @@
               </button>
             @else
               <button class="gradient btn fs-5 my-5 mx-3 btn-lg">
-                <a class="text-light p-3 text-decoration-none fw-semibold" href={{ route('admin.services.create')}}>Create Service</a>
+                <a class="text-light heading p-3 text-decoration-none fw-normal" href={{ route('admin.services.create')}}>Create Service</a>
               </button>
             @endif
         </div>

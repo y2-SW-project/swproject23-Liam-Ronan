@@ -73,14 +73,14 @@
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h3 class="heading">Book an Appointment</h3>
+                    <h3 class="heading">Appointment</h3>
                     @if(Auth::user()->hasRole('user'))
                         <button class="gradient btn fs-5 my-4">
-                            <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('user.bookings.create')}}">Book Appointment</a>
+                            <a class="text-light heading p-3 text-decoration-none fw-normal" href="{{ route('user.bookings.create')}}">Book Appointment</a>
                         </button>	
                     @else
                         <button class="gradient btn fs-5 my-4">
-                            <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('admin.bookings.create')}}">Book Appointment</a>
+                            <a class="text-light heading p-3 text-decoration-none fw-normal" href="{{ route('admin.bookings.create')}}">Book Appointment</a>
                         </button>	
                     @endif
  

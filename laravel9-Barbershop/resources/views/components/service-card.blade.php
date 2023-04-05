@@ -14,12 +14,14 @@
     </div>
     <div class="col-md-6">
         @if (Auth::user()->hasRole('user'))
-          <button class="gradient btn btn-md my-4">
-            <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('user.services.show', $service)}}">View Details</a>
+          <button class="gradient btn btn-md my-4 mx-2">
+            <a class="text-light p-3 text-decoration-none heading
+            fw-normal" href="{{ route('user.services.show', $service)}}">View Details</a>
           </button>
         @else
-          <button class="gradient btn btn-md my-4">
-            <a class="text-light p-3 text-decoration-none fw-semibold" href="{{ route('admin.services.show', $service)}}">View Details</a>
+          <button class="gradient btn btn-md my-4 mx-2">
+            <a class="text-light p-3 text-decoration-none heading
+            fw-normal" href="{{ route('admin.services.show', $service)}}">View Details</a>
           </button>
         @endif
     </div>

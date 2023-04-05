@@ -5,14 +5,14 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>About Us</title>
-		<link rel="stylesheet" href="resources/css/app.css" />
+		<link rel="stylesheet" href="{{ asset('css/app.css') }}" />
     <script src="//unpkg.com/alpinejs" defer></script>
 		@vite(['resources/js/app.js'])
 	</head>
 	<body>
 		<x-nav></x-nav>
 				
-		<x-otherBg></x-otherBg>
+    @include('components.bgImageText', ['heading' => 'About Us', 'image' => 'christian-koch-mQ4Ty8VmnPk-unsplash.jpg'])
 
         <main>
             <div class="container-fluid bg-black p-5">

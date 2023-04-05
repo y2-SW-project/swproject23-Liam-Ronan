@@ -5,13 +5,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Contact Us</title>
-		<link rel="stylesheet" href="resources/css/app.css" />
+		<link rel="stylesheet" href="{{ asset('css/app.css') }}" />
 		@vite(['resources/js/app.js'])
 	</head>
 	<body>
 		<x-nav></x-nav>
 				
-		<x-contactBg></x-contactBg>
+        @include('components.bgImageText', ['heading' => 'Contact Us', 'image' => 'andre-reis-1_DAlXy0wng-unsplash.jpg'])
 
         <main>
 
@@ -30,21 +30,21 @@
                         <h3 class="heading display-5">
                             Send us a <strong class="other-colour text-danger fw-bold"> Message</strong>
                         </h3>
-                        <form class="para">
+                        <form class="heading">
                             <div class="mb-3 pt-3">
                               <label for="exampleInputEmail1" class="form-label">Name</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1">
+                              <input type="email" placeholder="Enter Your Name" class="form-control" id="exampleInputEmail1">
                             </div>
                             <div class="mb-3 pt-3">
                                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1">
+                                <input type="email" placeholder="Enter Your Email" class="form-control" id="exampleInputEmail1">
                             </div>
                             <div class="mb-3 pt-3">
                                 <label for="exampleFormControlTextarea1" class="form-label">Write a message</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                                <textarea class="form-control" placeholder="Enter Message" id="exampleFormControlTextarea1" rows="6"></textarea>
                             </div>
                             <button class="gradient btn fs-5 my-3">
-                                <a class="text-light p-3 text-decoration-none fw-semibold" href={{ route('home')}}>Send Message</a>
+                                <a class="text-light p-3 text-decoration-none fw-normal" href={{ route('home')}}>Send Message</a>
                             </button>
                           </form>
                     </div>
