@@ -114,7 +114,7 @@
                                 </div>
 
                                 <div class="container">
-                                    <a class="slider-link btn para my-1 text-light" href="{{ route('register') }}">{{ __("Don't have an account? Make one here") }}</a>
+                                    <a class="slider-link btn para my-1 text-light" href="{{ route('register') }}">{{ __("Don't have an account? Create one here") }}</a>
                                 </div>
 
                             </div>

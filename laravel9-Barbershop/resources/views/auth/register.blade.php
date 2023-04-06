@@ -97,10 +97,10 @@
                                                 <input id="email" placeholder="Enter Email Address" type="email" class="form-control bg-transparent text-light @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                                 @error('email')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                             </div>
 
                                             <label for="password" class="fs-5 col-md-6 col-form-label p-2">{{ __('Password') }}</label>
@@ -108,7 +108,7 @@
                                                 <input id="password" placeholder="Enter Password" type="password" class="form-control bg-transparent text-light @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                                 @error('password')
-                                                    <span class="invalid-feedback" role="alert">
+                                                    <span class="invalid-feedback text-light fs-5 fw-normal" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                 @enderror

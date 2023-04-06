@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
+use App\Models\User;
 use App\Models\Barber;
+use App\Models\Services;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use App\Models\Services;
-use Carbon\Carbon;
 
 class Booking extends Model
 {
