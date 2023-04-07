@@ -69,7 +69,7 @@
                     @endunless
 
                     <div class="text-light" id="pagination-links">
-                      {{$services->links()}}
+                      {{$services->fragment('pagination-Fixed')->links()}}
                     </div>
                 </div>
             </div>
