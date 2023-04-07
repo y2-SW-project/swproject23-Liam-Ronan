@@ -11,7 +11,7 @@
 	<body>
 		<x-nav></x-nav>
 				
-		@include('components.bgImageText', ['heading' => 'Make A booking', 'image' => 'hair-spies-TNhm6uVurpU-unsplash.jpg'])
+		@include('components.bgImageText', ['heading' => 'Make A booking', 'image' => 'ashim-d-silva-1upYRBPmycA-unsplash.jpg'])
 
         <main>
 
@@ -27,7 +27,7 @@
 								@csrf
 								<div class="mt-4 mb-2 pt-1">
 									<label for="date" class="form-label">Date</label>
-									<input type="date" class="form-control text-muted" name="date" value="{{old('date')}}"/>
+									<input type="date" class="form-control text-muted" data-provide="datepicker" data-trigger="focus" name="date" value="{{old('date')}}"/>
 
 									@error('date')
 										<p class="text-danger para mt-1">{{$message}}</p>

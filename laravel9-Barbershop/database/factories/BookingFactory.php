@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Barber;
 use App\Models\Services;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -20,7 +21,6 @@ class BookingFactory extends Factory
         return [
             'date' => $this->faker->date(),
             'time' => $this->faker->time(),
-            'services_id' => Services::inRandomOrder()->first()->id,
         ];
     }
 }

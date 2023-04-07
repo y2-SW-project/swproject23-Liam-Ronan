@@ -108,7 +108,7 @@
                                                 <input id="password" placeholder="Enter Password" type="password" class="form-control bg-transparent text-light @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                                 @error('password')
-                                                    <span class="invalid-feedback text-light fs-5 fw-normal" role="alert">
+                                                    <span class="p-3 invalid-feedback text-light fs-5 fw-light" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                 @enderror

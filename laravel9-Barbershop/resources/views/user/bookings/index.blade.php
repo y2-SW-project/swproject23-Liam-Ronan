@@ -33,7 +33,7 @@
                             </div>
                             @endforeach
                             @else
-                                <p class="para">No Bookings found</p>
+                                <p class="heading text-light text-center display-5 pb-3">No Appointments found Please make one <strong class="fw-bold text-danger">below</strong></p>
                             @endunless
 
                             <div class="text-light">

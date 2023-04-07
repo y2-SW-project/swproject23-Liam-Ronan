@@ -17,7 +17,10 @@ class BookingController extends Controller
         $user = Auth::user();
         $user->authorizeRoles('user');
 
-        $bookings = Booking::with('barber', 'services')->latest()->simplePaginate(4);
+        $bookings = Booking::where('user_id', $user->id)
+        ->with('barber', 'services')
+        ->latest()
+        ->simplePaginate(4);
 
         return view('user.bookings.index')->with('bookings', $bookings);
     }
@@ -27,7 +30,12 @@ class BookingController extends Controller
         $user = Auth::user();
         $user->authorizeRoles('user');
 
-        return view('user.bookings.show')->with('booking', $booking);
+        if ($user->id === $booking->user_id) {
+            return view('user.bookings.show')->with('booking', $booking);
+        }
+        else {
+            return redirect()->route('user.bookings.index')->with('message', 'You do not have access to this booking.');
+        }
     }
 
     public function create()
@@ -37,11 +45,15 @@ class BookingController extends Controller
 
         $barbers = Barber::all();
         $services = Services::all();
-        return view('user.bookings.create')->with('barbers', $barbers)->with('services', $services);
+
+        return view('user.bookings.create', [
+            'barbers' => $barbers,
+            'services' => $services,
+            'user' => $user // Pass the authenticated user to the view
+        ]);
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
 
         $user = Auth::user();
         $user->authorizeRoles('user');
@@ -53,14 +65,15 @@ class BookingController extends Controller
             'service_id' => 'required' | 'exists:services,id'
         ]);
 
-        $booking = Booking::create([
+        $booking = new Booking([
             'date' => $request->date,
             'time' => $request->time,
             'barber_id' => $request->barber_id,
             'services_id' => $request->services_id
         ]);
 
-        // dd($request);
+        $booking->user_id = $user->id; // Set the user ID to the authenticated user's ID
+        $booking->save();
 
         if ($booking) {
             return redirect()->route('user.bookings.index')->with('message', 'Booking created successfully, We look forward to seeing you!');
