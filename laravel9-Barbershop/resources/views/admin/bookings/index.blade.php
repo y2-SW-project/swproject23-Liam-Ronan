@@ -12,7 +12,7 @@
 	<body>
 		<x-nav></x-nav>
 				
-		@include('components.bgImageText', ['heading' => 'All bookings', 'image' => 'pexels-obsahovka-obsahovka-4449791-min.jpg'])
+		@include('components.bgImageText', ['heading' => 'All Appointments', 'image' => 'pexels-obsahovka-obsahovka-4449791-min.jpg'])
 
         <main>
             

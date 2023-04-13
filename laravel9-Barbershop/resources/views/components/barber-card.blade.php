@@ -13,9 +13,9 @@
             </p>
         </div>
         @if(Auth::user()->hasRole('user'))
-          <a class="slider-link para fs-5 text-center text-decoration-none" href="{{route('user.barbers.show', $barber)}}">Learn More about {{$barber->name}}</a>
+          <a class="text-danger para fs-5 text-center text-decoration-underline" href="{{route('user.barbers.show', $barber)}}">Learn More about {{$barber->name}}</a>
         @else
-          <a class="slider-link heading fs-5 text-center text-decoration-none" href="{{route('admin.barbers.show', $barber)}}">Learn More about {{$barber->name}}</a>
+          <a class="text-danger heading fs-5 text-center text-decoration-underline" href="{{route('admin.barbers.show', $barber)}}">Learn More about {{$barber->name}}</a>
         @endif
 
     </div>
