@@ -45,6 +45,7 @@ Route::resource('admin/services', AdminServiceController::class)->middleware(['a
 
 Route::resource('admin/barbers', AdminBarberController::class)->middleware(['auth'])->names('admin.barbers');
 
+
 /* User Routes */
 Route::resource('user/services', UserServiceController::class)->middleware(['auth'])->names('user.services');
 

@@ -74,11 +74,11 @@
                 </div>
             </div>
             @if(Auth::user()->hasRole('user'))
-              <button class="gradient btn fs-5 my-5 btn-lg">
+              <button class="gradient btn fs-5 my-1 mb-5 btn-lg">
                 <a class="text-light heading p-3 text-decoration-none fw-normal" href={{ route('user.bookings.create')}}>Book Appointment</a>
               </button>
             @else
-              <button class="gradient btn fs-5 my-5 mx-3 btn-lg">
+              <button class="gradient btn fs-5 my-1 mb-5 btn-lg">
                 <a class="text-light heading p-3 text-decoration-none fw-normal" href={{ route('admin.services.create')}}>Create Service</a>
               </button>
             @endif

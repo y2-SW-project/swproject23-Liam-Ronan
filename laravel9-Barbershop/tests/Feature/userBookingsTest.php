@@ -18,6 +18,6 @@ class userBookingsTest extends TestCase
         $response = $this->get('/user/bookings');
 
         $response->assertStatus(200);
-        $response->assertSee(value: 'No Appointments found Please make one below')
+        $response->assertSee(value: 'No Appointments found Please make one below');
     }
 }
