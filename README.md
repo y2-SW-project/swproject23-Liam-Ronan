@@ -1,7 +1,7 @@
 # swproject23-Liam-Ronan
 swproject23-Liam-Ronan created by GitHub Classroom
 <div align="center">
-  <h1>Project Images<h1/>
+  <h1>Barbershop Booking System Project Images<h1/>
   <h2>Home</h2>
      <img src="https://user-images.githubusercontent.com/99216210/232347385-2eec4210-1810-47b9-b25a-d186d643e4d2.png">
   <br>
