@@ -5,7 +5,7 @@ swproject23-Liam-Ronan created by GitHub Classroom
   <h2>Home</h2>
      <img src="https://user-images.githubusercontent.com/99216210/232347385-2eec4210-1810-47b9-b25a-d186d643e4d2.png">
   <br>
-  <h2>login</h2>
+  <h2>Login</h2>
       <img src="https://user-images.githubusercontent.com/99216210/232347277-c8861cc2-911b-4f1e-b276-9ce59739eaac.png">
   <br>
   <h2>Register</h2>
@@ -29,7 +29,7 @@ swproject23-Liam-Ronan created by GitHub Classroom
   <h2>Admin Bookings</h2>
       <img src="https://user-images.githubusercontent.com/99216210/232347526-3a9d4185-fec8-42d6-b226-4fb74b4e700b.png">
   <br>
-  <h2>Admin barber</h2>
+  <h2>Admin Barber</h2>
       <img src="https://user-images.githubusercontent.com/99216210/232347526-3a9d4185-fec8-42d6-b226-4fb74b4e700b.png">
       <p></p>
   <br>
