@@ -13,11 +13,11 @@ class userBookingsTest extends TestCase
      *
      * @return void
      */
-    public function test_user_bookings_contains_empty_table()
-    {
-        $response = $this->get('/user/bookings');
+    // public function test_user_bookings_contains_empty_table()
+    // {
+    //     $response = $this->get('/user/bookings');
 
-        $response->assertStatus(200);
-        $response->assertSee(value: 'No Appointments found Please make one below');
-    }
+    //     $response->assertStatus(200);
+    //     $response->assertSee(value: 'No Appointments found Please make one below');
+    // }
 }

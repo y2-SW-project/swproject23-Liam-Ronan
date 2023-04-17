@@ -90,7 +90,6 @@
 
 
             <x-info></x-info>
-            <x-work></x-work>
 
         </main>
         

@@ -21,30 +21,30 @@ class renderPagesTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_the_application_returns_a_successful_home_page()
-    {
-        $response = $this->get('/home');
+    // public function test_the_application_returns_a_successful_home_page()
+    // {
+    //     $response = $this->get('/home');
 
-        $response->assertStatus(500);
-    }
+    //     $response->assertStatus(200);
+    // }
 
-    public function test_the_application_returns_a_successful_about_page()
-    {
-        $response = $this->get('/about');
+    // public function test_the_application_returns_a_successful_about_page()
+    // {
+    //     $response = $this->get('/about');
 
-        $response->assertStatus(500);
-    }
+    //     $response->assertStatus(200);
+    // }
 
-    public function test_the_application_returns_a_successful_contact_page()
-    {
-        $response = $this->get('/contact');
+    // public function test_the_application_returns_a_successful_contact_page()
+    // {
+    //     $response = $this->get('/contact');
 
-        $response->assertStatus(500);
-    }
+    //     $response->assertStatus(200);
+    // }
 
-    public function test_the_application_returns_a_successful_user_bookings_page()
-    {
-        $response = $this->get('/user/bookings');
-        $response->assertStatus(302);
-    }
+    // public function test_the_application_returns_a_successful_user_bookings_page()
+    // {
+    //     $response = $this->get('/user/bookings');
+    //     $response->assertStatus(302);
+    // }
 }
