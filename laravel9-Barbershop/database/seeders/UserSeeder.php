@@ -34,7 +34,7 @@ class UserSeeder extends Seeder
 
         $user = new User();
         $user->name = "Jane Doe";
-        $user->email = 'janedoe@gmail.com';
+        $user->email = 'janedoe@gmail.com'; // Change the email to match the one in your test
         $user->password = Hash::make('password');
         $user->save();
 

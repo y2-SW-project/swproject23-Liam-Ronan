@@ -4,9 +4,14 @@ namespace Tests\Feature;
 
 // use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use App\Models\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class renderPagesTest extends TestCase
 {
+
+    use RefreshDatabase;
+
     public function test_the_application_returns_a_successful_log_in_page()
     {
         $response = $this->get('/');
@@ -21,30 +26,39 @@ class renderPagesTest extends TestCase
         $response->assertStatus(200);
     }
 
-    // public function test_the_application_returns_a_successful_home_page()
-    // {
-    //     $response = $this->get('/home');
+    public function test_the_application_returns_a_successful_home_page()
+    {
 
-    //     $response->assertStatus(200);
-    // }
+        // create a user and authenticate them
+        $user = User::factory()->create();
+        $this->actingAs($user);
 
-    // public function test_the_application_returns_a_successful_about_page()
-    // {
-    //     $response = $this->get('/about');
+        $response = $this->get('/home');
 
-    //     $response->assertStatus(200);
-    // }
+        $response->assertStatus(200);
+    }
 
-    // public function test_the_application_returns_a_successful_contact_page()
-    // {
-    //     $response = $this->get('/contact');
+    public function test_the_application_returns_a_successful_about_page()
+    {
 
-    //     $response->assertStatus(200);
-    // }
+        // create a user and authenticate them
+        $user = User::factory()->create();
+        $this->actingAs($user);
 
-    // public function test_the_application_returns_a_successful_user_bookings_page()
-    // {
-    //     $response = $this->get('/user/bookings');
-    //     $response->assertStatus(302);
-    // }
+        $response = $this->get('/about');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_the_application_returns_a_successful_contact_page()
+    {
+
+        // create a user and authenticate them
+        $user = User::factory()->create();
+        $this->actingAs($user);
+
+        $response = $this->get('/about');
+
+        $response->assertStatus(200);
+    }
 }

@@ -23,20 +23,17 @@ use App\Http\Controllers\admin\BarberController as AdminBarberController;
 |
 */
 
-/* Route::get('/', function () {
-    return view('welcome');
-}); */
-
-
 Route::get('/', function () {
     return view('auth\login');
 });
 
+/* Other Pages */
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 
 Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+
 
 /* Admin routes */
 Route::resource('admin/bookings', AdminBookingController::class)->middleware(['auth'])->names('admin.bookings');
@@ -53,6 +50,8 @@ Route::resource('user/bookings', UserBookingController::class)->middleware(['aut
 
 Route::resource('user/barbers', UserBarberController::class)->middleware(['auth'])->names('user.barbers');
 
+
+/* This code defines a GET method that allows a user to view the details of a service type from the appointments page. */
 Route::get('/services/{id}', [App\Http\Controllers\user\ServiceController::class, 'showService'])->name('user.services.show');
 
 Route::get('/barbers/{id}', [App\Http\Controllers\user\BarberController::class, 'showBarber'])->name('user.barbers.show');
