@@ -1,0 +1,171 @@
+<mxfile host="app.diagrams.net" modified="2023-04-19T18:31:07.257Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="c3RcOklFubOrKG58_j19" version="21.1.7" type="onedrive">
+  <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-5" value="index.blade.php" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="250" y="60" width="100" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-3" value="" style="group;fillColor=#f8cecc;strokeColor=#b85450;" connectable="0" vertex="1" parent="1">
+          <mxGeometry x="60" y="20" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-2" value="" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="lCoCBE2By1L0vKrKhr4s-3">
+          <mxGeometry width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-1" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" vertex="1" parent="lCoCBE2By1L0vKrKhr4s-3">
+          <mxGeometry x="20" y="10" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-5" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="lCoCBE2By1L0vKrKhr4s-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="440" as="sourcePoint" />
+            <mxPoint x="70" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-6" value="user/create.blade.php" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="500" y="60" width="135" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-8" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="aM9ryv3xv72pqoxQDRHE-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="160" as="sourcePoint" />
+            <mxPoint x="150" y="140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="160" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-9" value="http://127.0.0.1:8000/home" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="lCoCBE2By1L0vKrKhr4s-8">
+          <mxGeometry x="-0.0438" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-10" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="lCoCBE2By1L0vKrKhr4s-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="160" as="sourcePoint" />
+            <mxPoint x="440" y="160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="330" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-12" value="http://127.0.0.1:8000/user/bookings/create" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="lCoCBE2By1L0vKrKhr4s-10">
+          <mxGeometry x="0.0197" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-13" value="user/bookingController" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="690" y="60" width="135" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-14" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="567.3103448275863" y="160.9999999999999" as="sourcePoint" />
+            <mxPoint x="760" y="161" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="620" y="161" />
+              <mxPoint x="700" y="161" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-15" value="Require" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="lCoCBE2By1L0vKrKhr4s-14">
+          <mxGeometry x="0.0197" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-16" value="create" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="880" y="60" width="135" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-17" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760.0003448275863" y="159.9999999999999" as="sourcePoint" />
+            <mxPoint x="952.69" y="160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="812.69" y="160" />
+              <mxPoint x="892.69" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-18" value="Require" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="lCoCBE2By1L0vKrKhr4s-17">
+          <mxGeometry x="0.0197" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-19" value="Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="190" width="110" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-21" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.017;entryY=0.402;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="lCoCBE2By1L0vKrKhr4s-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="950" y="160" as="sourcePoint" />
+            <mxPoint x="962.69" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="960" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-22" value="IINSERT INTO bookings(date, time, user_id, barber_id, service_id)&lt;br&gt;VALUES(&#39;2023-06-03&#39;, &#39;14:00&#39;, 4, 2, 5)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="lCoCBE2By1L0vKrKhr4s-21">
+          <mxGeometry x="0.0197" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=90;exitPerimeter=0;" edge="1" parent="1" source="lCoCBE2By1L0vKrKhr4s-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1210" y="340" as="sourcePoint" />
+            <mxPoint x="950" y="320" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-26" value="Bookings" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="lCoCBE2By1L0vKrKhr4s-25">
+          <mxGeometry x="-0.8645" y="-4" relative="1" as="geometry">
+            <mxPoint x="-153" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-27" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="lCoCBE2By1L0vKrKhr4s-16" target="lCoCBE2By1L0vKrKhr4s-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="810" y="330" as="sourcePoint" />
+            <mxPoint x="860" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="790" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-28" value="Bookings Array" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="lCoCBE2By1L0vKrKhr4s-27">
+          <mxGeometry x="-0.0184" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-29" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="lCoCBE2By1L0vKrKhr4s-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="567.5238095238096" y="329" as="sourcePoint" />
+            <mxPoint x="567.5238095238096" y="359" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="630" y="329" />
+              <mxPoint x="630" y="400" />
+              <mxPoint x="600" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-30" value="Foreach&lt;br&gt;Bookings" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="lCoCBE2By1L0vKrKhr4s-29">
+          <mxGeometry x="-0.0961" relative="1" as="geometry">
+            <mxPoint y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-31" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="lCoCBE2By1L0vKrKhr4s-6" target="aM9ryv3xv72pqoxQDRHE-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="410" as="sourcePoint" />
+            <mxPoint x="450" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="330" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-32" value="Shows Booking in bookings page" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="lCoCBE2By1L0vKrKhr4s-31">
+          <mxGeometry x="-0.0287" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lCoCBE2By1L0vKrKhr4s-33" value="Bookings.blade.php" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="235" y="320" width="130" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
