@@ -3,8 +3,11 @@
 namespace Tests\Feature;
 
 // use Illuminate\Foundation\Testing\RefreshDatabase;
+
+use App\Models\Barber;
 use Tests\TestCase;
 use App\Models\User;
+use App\Models\Services;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class renderPagesTest extends TestCase
@@ -58,6 +61,41 @@ class renderPagesTest extends TestCase
         $this->actingAs($user);
 
         $response = $this->get('/about');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_the_application_returns_a_successful_service_details_page()
+    {
+        // Create a user
+        $user = User::factory()->create();
+    
+        // Create a service
+        $service = new Services();
+        $service->haircut = 'fade';
+        $service->description = 'standard';
+        $service->price = '15.00';
+        $service->duration = '30 mins';
+        $service->save();
+    
+        $this->actingAs($user);
+    
+        // Attempt to access the service details page
+        $response = $this->get('/services/' . $service->id);
+        $response->assertStatus(200);
+    }
+
+    public function test_the_application_returns_a_successful_barber_details_page() {
+
+        $user = User::factory()->create();
+    
+        // Create a barber
+        $barber = Barber::factory()->create();
+
+        $this->actingAs($user);
+
+        // Attempt to access the barbers profile page
+        $response = $this->get('/barbers/' . $barber->id);
 
         $response->assertStatus(200);
     }

@@ -12,6 +12,35 @@ class AuthTest extends TestCase
 {
     use RefreshDatabase;
 
+    public function test_admin_can_login()
+    {
+        $admin = User::factory()->create([
+            'email' => 'liamronan@gmail.com',
+            'password' => bcrypt('password'),
+        ]);
+
+        $response = $this->post('/login', [
+            'email' => $admin->email,
+            'password' => 'password',
+        ]);
+
+        $this->assertAuthenticated();
+        $response->assertRedirect('/home');
+    }
+
+    public function test_admin_can_logout()
+    {
+
+        $admin = User::factory()->create();
+
+        $this->actingAs($admin);
+    
+        $response = $this->post('/logout');
+    
+        $this->assertGuest();
+        $response->assertRedirect('/');
+    }
+
     public function test_user_can_register()
     {
         $userData = [
