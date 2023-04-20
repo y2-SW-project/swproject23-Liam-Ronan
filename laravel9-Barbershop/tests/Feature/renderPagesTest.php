@@ -15,22 +15,21 @@ class renderPagesTest extends TestCase
 
     use RefreshDatabase;
 
-    public function test_the_application_returns_a_successful_log_in_page()
-    {
+    public function test_the_application_returns_a_successful_log_in_page() {
+        
         $response = $this->get('/');
 
         $response->assertStatus(200);
     }
 
-    public function test_the_application_returns_a_successful_register_page()
-    {
+    public function test_the_application_returns_a_successful_register_page() {
+
         $response = $this->get('/register');
 
         $response->assertStatus(200);
     }
 
-    public function test_the_application_returns_a_successful_home_page()
-    {
+    public function test_the_application_returns_a_successful_home_page() {
 
         // create a user and authenticate them
         $user = User::factory()->create();
@@ -41,8 +40,7 @@ class renderPagesTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_the_application_returns_a_successful_about_page()
-    {
+    public function test_the_application_returns_a_successful_about_page() {
 
         // create a user and authenticate them
         $user = User::factory()->create();
@@ -53,10 +51,8 @@ class renderPagesTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_the_application_returns_a_successful_contact_page()
-    {
+    public function test_the_application_returns_a_successful_contact_page() {
 
-        // create a user and authenticate them
         $user = User::factory()->create();
         $this->actingAs($user);
 
@@ -65,8 +61,8 @@ class renderPagesTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_the_application_returns_a_successful_service_details_page()
-    {
+    public function test_the_application_returns_a_successful_service_details_page() {
+
         // Create a user
         $user = User::factory()->create();
     

@@ -12,8 +12,8 @@ class AuthTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_admin_can_login()
-    {
+    public function test_admin_can_login() {
+        
         $admin = User::factory()->create([
             'email' => 'liamronan@gmail.com',
             'password' => bcrypt('password'),
@@ -28,8 +28,7 @@ class AuthTest extends TestCase
         $response->assertRedirect('/home');
     }
 
-    public function test_admin_can_logout()
-    {
+    public function test_admin_can_logout() {
 
         $admin = User::factory()->create();
 
@@ -41,8 +40,8 @@ class AuthTest extends TestCase
         $response->assertRedirect('/');
     }
 
-    public function test_user_can_register()
-    {
+    public function test_user_can_register() {
+
         $userData = [
             'name' => 'John Doe',
             'email' => 'john.doe@example.com',
@@ -57,8 +56,8 @@ class AuthTest extends TestCase
         $response->assertRedirect('/home');
     }
 
-    public function test_user_can_login()
-    {
+    public function test_user_can_login() {
+
         $user = User::factory()->create([
             'password' => bcrypt('password')
         ]);
@@ -72,23 +71,20 @@ class AuthTest extends TestCase
         $response->assertRedirect('/home');
     }
 
-    public function test_user_with_incorrect_credentials_cannot_login() 
-    {
+    public function test_user_with_incorrect_credentials_cannot_login() {
+
         $user = User::factory()->create();
         
         $this->post('/login', [
             'email' => $user->email,
             'password' => 'badpassword'
         ]);
-        
-        // $response->assertSessionHasErrors('email');
-        // $response->assertSessionDoesntHaveErrors('password');
+
         $this->assertGuest();
-    
+
     }
 
-    public function test_user_can_logout()
-    {
+    public function test_user_can_logout() { 
 
         $user = User::factory()->create();
 

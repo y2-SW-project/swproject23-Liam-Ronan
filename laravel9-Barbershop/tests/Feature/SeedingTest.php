@@ -59,7 +59,7 @@ class SeedingTest extends TestCase
         }
     }
 
-    public function test_roles_table_is_seeded_with_fake_data() {
+    public function test_roles_table_is_seeded() {
         
         $this->seed();
         $roles = Role::all();
@@ -72,7 +72,7 @@ class SeedingTest extends TestCase
         }
     }
 
-    public function test_users_table_is_seeded_with_fake_data() {
+    public function test_users_table_is_seeded() {
         
         $this->seed();
         $users = User::all();
