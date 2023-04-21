@@ -1,3 +1,9 @@
-1) https://www.svgrepo.com/vectors/barber/
+•The 2022 sprout social index: Social Media Trends for the UK & ireland. Sprout Social. (2022, October 26). Retrieved February 2, 2023, from https://sproutsocial.com/insights/data/uk-ireland-social-media-trends-2022/ 
 
-2)
+•Patoli, Z. (2022, November 8). Council post: Why email marketing is still relevant in 2022. Forbes. Retrieved February 2, 2023, from https://www.forbes.com/sites/forbesagencycouncil/2022/07/28/why-email-marketing-is-still-relevant-in-2022/?sh=5af1da4527cf 
+
+•The PHP framework for web artisans. Laravel. (n.d.). Retrieved April 14, 2023, from https://laravel.com/ 
+
+•17 benefits of Laravel Framework.- IC Studio, Україна. (n.d.). Retrieved April 14, 2023, from https://icstudio.online/en/post/17-benefits-laravel-framework 
+
+•Hernandez, R. D. (2021, April 20). The model view controller pattern – MVC architecture and Frameworks explained. freeCodeCamp.org. Retrieved April 14, 2023, from https://www.freecodecamp.org/news/the-model-view-controller-pattern-mvc-architecture-and-frameworks-explained/ 
