@@ -6,7 +6,7 @@
 
         <div class="row text-center d-flex justify-content-center text-light">
             <div class="col-md-8">
-                <p class="body lead pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Neque morbi sed mauris facilisi pulvinar nisl elit. Lacus elementum fringilla et habitant tellus a massa</p>  
+                <p class="body lead pb-3">Whether you need a simple trim or a more elaborate style, our barbers will work with you to achieve the look you want. So why wait? Book your next appointment today and start looking and feeling your best!</p>  
             </div>
         </div>
 

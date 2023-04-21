@@ -3,7 +3,7 @@
             <h2 class="heading display-4 pb-3 fw-light">Get in touch with <strong class="other-colour text-danger fw-bold slider-link"> Us</strong></h2>
             <div class="para fs-5">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus porttitor dui.Lorem ipsum dolor sit amet consectetur. Neque morbi sed mauris facilisi pulvinar nisl elit. Lacus elementum fringilla et habitant tellus a massa 
+                    Get in touch with us for all your barbering needs. Our team is ready to serve you with a range of services including haircuts, styling, and more. Check out our schedule and location below and contact us to book your appointment today.
                 </p>
             </div>
             <div class="row text-center heading p-4 fs-5">
